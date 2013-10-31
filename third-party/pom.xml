@@ -1,0 +1,21 @@
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<groupId>com.pearson.openideas.cq5</groupId>
+	<artifactId>pearson-openideas-third-party</artifactId>
+	<packaging>pom</packaging>
+	<name>Pearson Open Ideas Third Party Dependencies</name>
+	<description>Parent project which invokes the build for including various third-party dependencies into CQ's OSGI container</description>
+	
+	<parent>
+		<groupId>com.pearson.openideas.cq5</groupId>
+		<artifactId>pearson-openideas-parent</artifactId>
+		<version>1.4.0</version>
+		<relativePath>../parent/pom.xml</relativePath>
+	</parent>
+	
+	<modules>
+		<module>org.apache.servicemix.bundles.solr-solrj-4.2.1_1</module>
+	</modules>
+	
+</project>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="About Us Sidebar"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <aboutUsPromo
+                jcr:primaryType="cq:Panel"
+                title="Promo Info">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <link
+                        jcr:primaryType="cq:Widget"
+                        editable="{Boolean}false"
+                        fieldDescription="Please enter the link for the page you wish to link to"
+                        fieldLabel="Link Url"
+                        name="./promourl"
+                        rootPath="/content/plc/prkc/uk/open-ideas/en"
+                        xtype="pathfield"/>
+                    <promoText
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="This text is linked"
+                        fieldLabel="Link Text"
+                        maxLength="56"
+                        maxLengthText="The text is too long! You can only enter 56 characters"
+                        name="./promotext"
+                        xtype="textfield"/>
+                    <moreText
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="This text is placed before the link"
+                        fieldLabel="Text"
+                        name="./txt"
+                        xtype="textfield"/>
+                </items>
+            </aboutUsPromo>
+            <imagetab
+                jcr:primaryType="cq:Widget"
+                path="/apps/plc/prkc/uk/open-ideas/components/dialog/tabs/imagetab.infinity.json"
+                xtype="cqinclude"/>
+            <advancedimagetab
+                jcr:primaryType="cq:Widget"
+                path="/apps/plc/prkc/uk/open-ideas/components/dialog/tabs/advancedimagetab.infinity.json"
+                xtype="cqinclude"/>
+        </items>
+    </items>
+</jcr:root>

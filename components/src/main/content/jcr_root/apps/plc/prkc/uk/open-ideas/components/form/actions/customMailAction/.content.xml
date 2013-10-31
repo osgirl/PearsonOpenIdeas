@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:description="This action is used to send an email on the Contribute page."
+    jcr:primaryType="sling:Folder"
+    jcr:title="Pearson Open Ideas - Send Email to Contributor"
+    sling:resourceType="foundation/components/form/action"
+    componentGroup=".hidden"/>

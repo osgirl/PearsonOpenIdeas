@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2013-09-12T11:58:14.900+01:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2013-09-12T12:01:02.786+01:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
+        cq:template="/libs/wcm/core/templates/designpage"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Open Ideas Design"
+        jcr:uuid="ef3a65c3-a273-443f-8e70-8304af3a435e"
+        sling:resourceType="wcm/core/components/designer">
+        <openIdeasArticleTemplate jcr:primaryType="nt:unstructured">
+            <par
+                jcr:lastModified="{Date}2013-05-09T16:59:57.288-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[/libs/foundation/components/image,/apps/plc/prkc/uk/open-ideas/components/content/articleDownloadComponent,/apps/plc/prkc/uk/open-ideas/components/content/articleText,/apps/plc/prkc/uk/open-ideas/components/content/articleVideo,group:Pearson Open Ideas - Comments]">
+                <section jcr:primaryType="nt:unstructured"/>
+                <comments
+                    jcr:lastModified="{Date}2013-09-12T11:58:14.893+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="social/commons/components/comments"
+                    commentresourcetype="/apps/plc/prkc/uk/open-ideas/components/commons/comments/comment"/>
+            </par>
+            <par2
+                jcr:lastModified="{Date}2013-05-13T11:04:27.478-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="/apps/plc/prkc/uk/open-ideas/components/content/articleContributor">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par2>
+        </openIdeasArticleTemplate>
+        <openIdeasHomePageTemplate jcr:primaryType="nt:unstructured">
+            <par
+                jcr:lastModified="{Date}2013-05-15T21:48:13.527-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[/apps/plc/prkc/uk/open-ideas/components/content/articleVideo,/apps/plc/prkc/uk/open-ideas/components/content/editorsChoice]">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par>
+            <par3
+                jcr:lastModified="{Date}2013-05-16T14:03:53.015-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="/apps/plc/prkc/uk/open-ideas/components/content/homepagePromo">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par3>
+            <par2
+                jcr:lastModified="{Date}2013-05-16T14:04:04.866-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="/apps/plc/prkc/uk/open-ideas/components/content/homepagePromo">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par2>
+        </openIdeasHomePageTemplate>
+        <openIdeasAboutUsTemplate jcr:primaryType="nt:unstructured">
+            <par
+                jcr:lastModified="{Date}2013-05-20T10:30:07.148-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="/apps/plc/prkc/uk/open-ideas/components/content/aboutUS">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par>
+            <par2
+                jcr:lastModified="{Date}2013-05-20T11:24:34.509-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="/apps/plc/prkc/uk/open-ideas/components/content/aboutUsSidebar">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par2>
+        </openIdeasAboutUsTemplate>
+        <openIdeasContributeTemplate jcr:primaryType="nt:unstructured">
+            <par
+                jcr:lastModified="{Date}2013-06-04T13:39:13.198-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:Form,group:Pearson Open Ideas - Account,/apps/plc/prkc/uk/open-ideas/components/content/articleText,group:Pearson Open Ideas - Contribute,group:Pearson Open Ideas - Form]">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par>
+        </openIdeasContributeTemplate>
+        <openIdeasEventsTemplate jcr:primaryType="nt:unstructured">
+            <par
+                jcr:lastModified="{Date}2013-06-25T13:08:44.318-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:Pearson Open Ideas - Events,/apps/plc/prkc/uk/open-ideas/components/form/confirmation]">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par>
+        </openIdeasEventsTemplate>
+        <openIdeasContributorsListTemplate jcr:primaryType="nt:unstructured">
+            <par
+                jcr:lastModified="{Date}2013-06-12T09:24:04.510-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="/apps/plc/prkc/uk/open-ideas/components/content/articleContributor">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par>
+            <par2
+                jcr:lastModified="{Date}2013-06-12T09:24:12.804-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="/apps/plc/prkc/uk/open-ideas/components/content/aboutUsSidebar">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par2>
+        </openIdeasContributorsListTemplate>
+        <openIdeasStaticPageTemplate jcr:primaryType="nt:unstructured">
+            <par
+                jcr:lastModified="{Date}2013-06-20T11:46:15.799-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[/libs/foundation/components/image,/apps/plc/prkc/uk/open-ideas/components/content/articleDownloadComponent,/apps/plc/prkc/uk/open-ideas/components/content/articleText,/apps/plc/prkc/uk/open-ideas/components/content/articleVideo,/apps/plc/prkc/uk/open-ideas/components/form/confirmation]">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par>
+            <staticPageParSys
+                jcr:lastModified="{Date}2013-08-01T11:21:36.407-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[/libs/foundation/components/image,/apps/plc/prkc/uk/open-ideas/components/content/articleDownloadComponent,/apps/plc/prkc/uk/open-ideas/components/content/articleText,/apps/plc/prkc/uk/open-ideas/components/content/articleVideo,/apps/plc/prkc/uk/open-ideas/components/form/confirmation]">
+                <section jcr:primaryType="nt:unstructured"/>
+            </staticPageParSys>
+        </openIdeasStaticPageTemplate>
+    </jcr:content>
+</jcr:root>

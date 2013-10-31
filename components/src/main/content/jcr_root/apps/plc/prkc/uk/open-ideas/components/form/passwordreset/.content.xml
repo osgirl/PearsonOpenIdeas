@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    cq:lastReplicated="{Date}2013-01-31T10:25:31.906Z"
+    cq:lastReplicatedBy="admin"
+    cq:lastReplicationAction="Activate"
+    jcr:description="Reset a user's password"
+    jcr:mixinTypes="[cq:ReplicationStatus]"
+    jcr:primaryType="cq:Component"
+    jcr:title="Password Reset"
+    sling:resourceSuperType="foundation/components/profile/form/password"
+    allowedParents="[*/parsys]"
+    componentGroup="Pearson Open Ideas - Form"/>

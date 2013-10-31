@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <contributorInfo
+                jcr:primaryType="cq:Panel"
+                title="Contributor Info"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <checkbox
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Select the checkbox, to set this contributor as the lead contributor."
+                        fieldLabel="Set as Lead Contributor"
+                        name="./leadContributorChoice"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <contributor
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}true"
+                        fieldLabel="Contributor"
+                        name="./cq:tags"
+                        xtype="tags">
+                        <namespaces jcr:primaryType="cq:WidgetCollection">
+                            <themes
+                                jcr:primaryType="cq:Widget"
+                                maximum="1"
+                                name="plc-prkc-uk-open-ideas-contributors"/>
+                        </namespaces>
+                    </contributor>
+                    <url
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The URL link for this contributor. For example, http://contributorhomepage.com"
+                        fieldLabel="URL:"
+                        fieldSubLabel="(Optional)"
+                        name="./contributorUrl"
+                        xtype="textfield"/>
+                </items>
+            </contributorInfo>
+        </items>
+    </items>
+</jcr:root>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    helpPath="en/cq/current/wcm/default_components.html#Text"
+    title="Text"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <emailLabel
+            jcr:primaryType="cq:Widget"
+            defaultValue="Email Address"
+            fieldLabel="Email Label"
+            name="./emailLabel"
+            xtype="textfield"/>
+        <passwordLabel
+            jcr:primaryType="cq:Widget"
+            defaultValue="Password"
+            fieldLabel="Password Label"
+            name="./passwordLabel"
+            xtype="textfield"/>
+        <redirectTo
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Redirect To"
+            name="./redirectTo"
+            xtype="pathfield"/>
+        <usersPath
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Users Path"
+            name="./usersPath"
+            rootPath="/home/users"
+            xtype="pathfield"/>
+        <defaultErrorMessage
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Default Error Message"
+            name="./defaultErrorMessage"
+            xtype="textarea"/>
+        <duplicateUserErrorMessage
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Duplicate User Error Message"
+            name="./duplicateUserErrorMessage"
+            xtype="textarea"/>
+        <userNotFoundErrorMessage
+            jcr:primaryType="cq:Widget"
+            fieldLabel="User Not Found Error Message"
+            name="./userNotFoundErrorMessage"
+            xtype="textarea"/>
+        <authenticationFailedErrorMessage
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Authentication Failed Error Message"
+            name="./authenticationFailedErrorMessage"
+            xtype="textarea"/>
+        <forgotPassword
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Forgot Password"
+            name="./forgotPassword"
+            xtype="pathfield"/>
+    </items>
+</jcr:root>

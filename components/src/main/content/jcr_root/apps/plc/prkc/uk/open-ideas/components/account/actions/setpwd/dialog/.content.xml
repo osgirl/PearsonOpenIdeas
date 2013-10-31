@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    cq:lastReplicated="{Date}2013-02-06T12:17:11.000Z"
+    cq:lastReplicatedBy="admin"
+    cq:lastReplicationAction="Activate"
+    cq:redirectFieldName="pwdChangedPage"
+    jcr:primaryType="cq:WidgetCollection">
+    <noUserIdMessage/>
+    <noPasswordResetKeyMessage/>
+    <invalidResetPasswordKeyMessage/>
+    <noResetPasswordRequestedMessage/>
+    <resetPasswordLimitHours/>
+    <resetPasswordLimitMessage/>
+</jcr:root>

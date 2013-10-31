@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:description="The navigation menu that appears at the top of the page"
+    jcr:primaryType="cq:Component"
+    jcr:title="Navigation Menu Component"
+    allowedParents="[*/parsys]"
+    componentGroup=".hidden"/>

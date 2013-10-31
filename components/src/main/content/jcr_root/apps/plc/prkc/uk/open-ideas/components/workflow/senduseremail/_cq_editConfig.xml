@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:dialogMode="floating"
+    cq:inherit="{Boolean}true"
+    cq:lastReplicated="{Date}2013-01-31T10:25:34.225Z"
+    cq:lastReplicatedBy="admin"
+    cq:lastReplicationAction="Activate"
+    jcr:mixinTypes="[cq:ReplicationStatus]"
+    jcr:primaryType="cq:EditConfig">
+    <cq:formParameters
+        jcr:description="A process to send a user an email"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Send User Email"
+        PROCESS="com.pearson.openideas.cq5.components.workflows.SendUserEmailProcess"
+        PROCESS_AUTO_ADVANCE="true"/>
+</jcr:root>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="sling:OsgiConfig"
+          openideas.master.solr.server.url="http://uat02.srch-master.wcm.svvsbak.pearsontc.net:8082/openIdeas/openIdeas"
+          openideas.slave.solr.server.url="http://uat02.srch-live.wcm.svvs.pearsontc.net:8081/live-openIdeas/openIdeas"/>

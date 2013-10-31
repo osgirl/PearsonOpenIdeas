@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:description="This component pulls the most recent editor's choice article for display"
+    jcr:primaryType="cq:Component"
+    jcr:title="Editor's Choice Component"
+    sling:resourceSuperType="libs/foundation/parbase"
+    componentGroup="Pearson Open Ideas - Homepage"/>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    cq:isContainer="{Boolean}true"
+    cq:lastReplicated="{Date}2013-09-12T12:00:41.520+01:00"
+    cq:lastReplicatedBy="admin"
+    cq:lastReplicationAction="Activate"
+    jcr:description="List of comments"
+    jcr:mixinTypes="[cq:ReplicationStatus]"
+    jcr:primaryType="cq:Component"
+    jcr:title="Comments"
+    sling:resourceSuperType="social/commons/components/comments"
+    allowedParents="[*]"
+    componentGroup="Pearson Open Ideas - Comments"/>

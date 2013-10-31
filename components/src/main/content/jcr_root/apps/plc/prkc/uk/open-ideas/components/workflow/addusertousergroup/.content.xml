@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    cq:lastReplicated="{Date}2013-01-31T10:25:34.042Z"
+    cq:lastReplicatedBy="admin"
+    cq:lastReplicationAction="Activate"
+    jcr:description="A process to add a user to a user group"
+    jcr:mixinTypes="[cq:ReplicationStatus]"
+    jcr:primaryType="cq:Component"
+    jcr:title="Open Ideas Add User to User Group"
+    sling:resourceSuperType="cq/workflow/components/model/process"
+    allowedParents="[*/parsys]"
+    componentGroup="Workflow"/>

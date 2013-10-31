@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="nt:unstructured"
+        title="Comments"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <props
+                jcr:primaryType="cq:Panel"
+                title="Comments">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <description
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Optional description text displayed in the comment field"
+                        fieldLabel="Default message"
+                        name="./defaultMessage"
+                        xtype="textfield"/>
+                    <moderate
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="false"
+                        fieldLabel="Moderated"
+                        fieldLabel_commentI18n="Moderate comments"
+                        name="./moderateComments"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <requireLogin
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="false"
+                        fieldLabel="Requires Login"
+                        fieldLabel_commentI18n="Requires login to add comments"
+                        name="./requireLogin"
+                        type="checkbox"
+                        xtype="hidden"/>
+                    <closed
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="false"
+                        fieldLabel="Closed"
+                        fieldLabel_commentI18n="No more comments accepted"
+                        name="./closed"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <allowDeleteComments
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="false"
+                        fieldLabel="Allow Users to Delete Comments"
+                        name="./allowDeleteComments"
+                        type="checkbox"
+                        xtype="selection"/>
+                </items>
+            </props>
+            <dateFormatTab
+                jcr:primaryType="cq:Panel"
+                path="/libs/social/commons/components/comments/dialog/items/items/dateFormatTab.infinity.json"
+                xtype="cqinclude"/>
+        </items>
+    </items>
+</jcr:root>

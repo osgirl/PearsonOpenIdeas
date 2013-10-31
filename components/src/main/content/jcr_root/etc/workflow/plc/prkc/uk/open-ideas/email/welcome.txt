@@ -1,0 +1,10 @@
+From: Pearson Open Ideas <openideas@pearson.com>
+To: ${email}
+Subject: Thank you for signing up to Open Ideas
+
+
+Hello ${givenName}, 
+Thank you for signing up to Pearson Open Ideas - http://research.pearson.com
+
+Best Wishes, 
+The Open Ideas Team

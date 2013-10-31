@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
+    jcr:description="Keyword tags for Open Ideas Articles "
+    jcr:lastModified="{Date}2013-04-18T11:57:53.020-04:00"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Tag"
+    jcr:title="Pearson Open Ideas Article Keywords"
+    sling:resourceType="cq/tagging/components/tag">
+    <rep:policy/>
+    <computers/>
+    <books/>
+    <robots/>
+    <pizza/>
+</jcr:root>

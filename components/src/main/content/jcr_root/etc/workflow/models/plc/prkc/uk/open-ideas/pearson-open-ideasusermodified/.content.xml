@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/default"
+        cq:lastModified="{Date}2013-06-19T18:21:53.079-04:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2013-06-19T16:45:30.852-04:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Pearson Open Ideas User Modified"
+        jcr:uuid="88a94d3d-b58e-43b5-a51a-3406514a3db0"
+        sling:resourceType="cq/workflow/components/pages/model"
+        SolrSyncStatus="Processing">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <process
+                jcr:created="{Date}2013-06-04T16:25:09.021-04:00"
+                jcr:createdBy="admin"
+                jcr:description="Updates the property USERACTION"
+                jcr:lastModified="{Date}2013-06-19T18:21:53.077-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Update User Action (DONE)"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="/etc/workflow/scripts/plc/prkc/uk/open-ideas/update_user_action.ecma"
+                    PROCESS_ARGS="DONE"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process>
+            <manageemailalertgrou
+                jcr:created="{Date}2013-06-19T18:10:07.805-04:00"
+                jcr:createdBy="admin"
+                jcr:description="A process to manage the email alert group"
+                jcr:lastModified="{Date}2013-06-19T18:10:19.223-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Manage Email Alert Group"
+                sling:resourceType="plc/prkc/uk/open-ideas/components/workflow/manageemailalertgroup"
+                PROCESS="com.pearson.openideas.cq5.components.workflows.ManageEmailAlertGroup"
+                PROCESS_AUTO_ADVANCE="true">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    principals="pearson-open-ideas-weekly-list"
+                    PROCESS="com.pearson.openideas.cq5.components.workflows.ManageEmailAlertGroup"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </manageemailalertgrou>
+            <process_0
+                jcr:created="{Date}2013-06-04T16:26:33.350-04:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2013-06-19T16:39:56.750-04:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Create User Message"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.pearson.openideas.cq5.components.workflows.CreateUserMessageProcess"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_0>
+        </flow>
+        <model/>
+    </jcr:content>
+</jcr:root>

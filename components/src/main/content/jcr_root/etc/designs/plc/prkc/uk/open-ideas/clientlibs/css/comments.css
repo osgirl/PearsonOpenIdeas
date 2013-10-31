@@ -1,0 +1,32 @@
+
+.comments {font-size: 95%;}
+.comments a, .comments a:hover {
+    color: #9d1c4a;
+}
+.comments .moderate {color: #9d1c4a; background-color: #ccc;}
+.comments .username {font-weight: bold; font-style:italic; padding-right: 10px;}
+.comments h2 {font-family: "GillSansMTProMedium", arial, sans-serif;
+				font-weight: normal;
+				color: #9d1c4a;
+				font-size: 18px;
+				margin: 16px 0 15px 0;
+}
+ul.comments{list-style-type: none; margin: 0px 0px 10px 0px; padding: 0px}
+ul.comments li {padding: 10px 0px 0px 0px;}
+.comments label {display: none;}
+.comments .text-heading {padding: 10px 0px;}
+.comment-body {border-top: 1px solid #666;}
+.submit-block {margin-top:10px;}
+.comments-count {font-family: "GillSansMTProMedium", arial, sans-serif;
+				font-weight: bold;
+				color: #666;
+				font-size: 14px;
+				margin: 15px 0 20px 0;
+}
+textarea.comment-text {
+    margin:0;
+    margin-bottom:10px;
+    width: 600px;
+    height: 80px;
+    display: inline-block;
+}

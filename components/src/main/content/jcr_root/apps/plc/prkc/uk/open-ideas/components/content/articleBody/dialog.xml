@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="450"
+    title="Article Body Component"
+    width="750"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <articleInfo
+                jcr:primaryType="cq:Panel"
+                title="Article Info"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <homepage
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="If you select one or both tags your article may be promoted on the homepage"
+                        fieldLabel="Homepage Promo"
+                        name="./cq:tags"
+                        namespaces="[plc-prkc-uk-open-ideas-homepage]"
+                        xtype="tags"/>
+                    <articleTitle
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="The Text to display as the article's headline"
+                        fieldLabel="Article Title"
+                        maxLength="56"
+                        maxLengthText="The title is too long! You can only enter 56 characters"
+                        name="./articletitle"
+                        xtype="textfield"/>
+                    <newPublishDate
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Enter the new date to display as the publish date for this article (leave blank to use today's date)"
+                        fieldLabel="New Publish Date"
+                        name="./newpublishdate"
+                        xtype="datefield"/>
+                    <summary
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        fieldDescription="Enter a short summary of the article"
+                        fieldLabel="Short Summary"
+                        fieldSubLabel="This summary will be shown on the landing/home page to promote your article."
+                        maxLength="175"
+                        maxLengthText="You have entered too many characters, the max is 175."
+                        name="./shortsummary"
+                        xtype="textarea"/>
+                    <citation
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Citation"
+                        name="./citation"
+                        xtype="textfield"/>
+                </items>
+            </articleInfo>
+            <imagetab
+                jcr:primaryType="cq:Widget"
+                path="/apps/plc/prkc/uk/open-ideas/components/dialog/tabs/imagetab.infinity.json"
+                xtype="cqinclude"/>
+            <advancedimagetab
+                jcr:primaryType="cq:Widget"
+                path="/apps/plc/prkc/uk/open-ideas/components/dialog/tabs/advancedimagetab.infinity.json"
+                xtype="cqinclude"/>
+            <imagethumb
+                jcr:primaryType="cq:Widget"
+                allowBlank="{Boolean}false"
+                cropParameter="./imagethumb/imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./imagethumb/fileName"
+                fileReferenceParameter="./imagethumb/fileReference"
+                mapParameter="./imagethumb/imageMap"
+                name="./imagethumb/file"
+                requestSuffix="/image.img.png"
+                rotateParameter="./imagethumb/imageRotate"
+                sizeLimit="100"
+                title="Thumbnail"
+                xtype="html5smartimage"/>
+            <advancedthumb
+                jcr:primaryType="cq:Widget"
+                title="Advanced Thumbnail Properties"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Title"
+                        name="./imagethumb/jcr:title"
+                        xtype="textfield"/>
+                    <alt
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="(leave empty to use the title defined above)"
+                        fieldLabel="Alt Text"
+                        name="./imagethumb/alt"
+                        xtype="textfield"/>
+                    <linkURL
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Drop files or pages from the Content Finder"
+                        fieldLabel="Link to"
+                        name="./imagethumb/linkURL"
+                        xtype="pathfield"/>
+                    <description
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Description"
+                        name="./imagethumb/jcr:description"
+                        xtype="textarea"/>
+                    <size
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Size"
+                        heightParameter="./imagethumb/height"
+                        widthParameter="./imagethumb/width"
+                        xtype="sizefield"/>
+                    <resType
+                        jcr:primaryType="cq:Widget"
+                        ignoreData="{Boolean}true"
+                        name="./imagethumb/sling:resourceType"
+                        value="foundation/components/image"
+                        xtype="hidden"/>
+                </items>
+            </advancedthumb>
+            <text
+                jcr:primaryType="cq:Widget"
+                anchor="100%"
+                title="Article Text"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <keywords
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="Please enter a comma separated list of alphanumeric keywords"
+                        fieldLabel="Keywords"
+                        name="./newKeywords"
+                        regex="/^([-a-zA-Z0-9 ]{3,50},)*([-a-zA-Z0-9 ]{3,50})?$/"
+                        regexText="Keywords must be a comma separated list, words must contain only numbers or letters"
+                        xtype="textfield"/>
+                    <text
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        hideLabel="{Boolean}true"
+                        name="./text"
+                        xtype="richtext">
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <links jcr:primaryType="nt:unstructured">
+                                <linkDialogConfig
+                                    jcr:primaryType="nt:unstructured"
+                                    height="{Long}316">
+                                    <linkAttributes jcr:primaryType="cq:WidgetCollection">
+                                        <linkAdvanced
+                                            jcr:primaryType="cq:Widget"
+                                            collapsed="{Boolean}true"
+                                            collapsible="{Boolean}true"
+                                            inputValue="advanced"
+                                            name="./linkdialog/cq:adhocLinkTrackingTab"
+                                            title="Link tracking"
+                                            xtype="dialogfieldset">
+                                            <items jcr:primaryType="cq:WidgetCollection">
+                                                <enable
+                                                    jcr:primaryType="nt:unstructured"
+                                                    attribute="enabletracking"
+                                                    fieldDescription="override analytics framework settings"
+                                                    fieldLabel="Custom link tracking"
+                                                    name="./linkdialog/cq:adhocLinkTrackingEnableTracking"
+                                                    xtype="checkbox">
+                                                    <listeners
+                                                        jcr:primaryType="nt:unstructured"
+                                                        check="function(component){var dlg=component.findParentByType('rtelinkdialog');dlg.enableSCFields(component.checked);}"/>
+                                                </enable>
+                                                <events
+                                                    jcr:primaryType="nt:unstructured"
+                                                    attribute="adhocevents"
+                                                    fieldDescription="e.g.: event2, event7"
+                                                    fieldLabel="Include SiteCatalyst events"
+                                                    name="./linkdialog/cq:adhocLinkTrackingEvents"
+                                                    xtype="textfield"/>
+                                                <evars
+                                                    jcr:primaryType="nt:unstructured"
+                                                    attribute="adhocevars"
+                                                    fieldDescription="e.g.: eVar1: pagedata.url, prop4: 'const'"
+                                                    fieldLabel="Include SiteCatalyst variables"
+                                                    name="./linkdialog/cq:adhocLinkTrackingEvars"
+                                                    xtype="textfield"/>
+                                            </items>
+                                        </linkAdvanced>
+                                    </linkAttributes>
+                                </linkDialogConfig>
+                            </links>
+                            <image
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <undo
+                                jcr:primaryType="nt:unstructured"
+                                features="[undo,redo]"/>
+                            <justify
+                                jcr:primaryType="nt:unstructured"
+                                features="[]"/>
+                            <edit
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <findreplace
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <misctools
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <paraformat
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <spellcheck
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <styles
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <subsuperscript
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <table
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                        </rtePlugins>
+                    </text>
+                    <isRichTextFlag
+                        jcr:primaryType="cq:Widget"
+                        ignoreData="{Boolean}true"
+                        name="./textIsRich"
+                        value="true"
+                        xtype="hidden"/>
+                </items>
+            </text>
+            <tags
+                jcr:primaryType="cq:Panel"
+                title="Tags"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <theme
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="The theme tag for this article"
+                        fieldLabel="Theme"
+                        name="./cq:tags"
+                        xtype="tags">
+                        <namespaces jcr:primaryType="cq:WidgetCollection">
+                            <themes
+                                jcr:primaryType="cq:Widget"
+                                maximum="1"
+                                name="plc-prkc-uk-open-ideas-themes"/>
+                        </namespaces>
+                    </theme>
+                    <sector
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="The sector tag for this article"
+                        fieldLabel="Sector"
+                        name="./cq:tags"
+                        xtype="tags">
+                        <namespaces jcr:primaryType="cq:WidgetCollection">
+                            <categories
+                                jcr:primaryType="cq:Widget"
+                                maximum="1"
+                                name="plc-prkc-uk-open-ideas-categories"/>
+                        </namespaces>
+                    </sector>
+                    <regions
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The region tag for this article"
+                        fieldLabel="Regions"
+                        name="./cq:tags"
+                        xtype="tags">
+                        <namespaces jcr:primaryType="cq:WidgetCollection">
+                            <regions
+                                jcr:primaryType="cq:Widget"
+                                maximum="1"
+                                name="plc-prkc-uk-open-ideas-regions"/>
+                        </namespaces>
+                    </regions>
+                    <organisations
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Select one or more organisations for this article "
+                        fieldLabel="Organisation/s"
+                        name="./cq:tags"
+                        namespaces="[plc-prkc-uk-open-ideas-organisations]"
+                        xtype="tags"/>
+                    <countries
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Select from one or more countries"
+                        fieldLabel="Country/Countries"
+                        name="./cq:tags"
+                        namespaces="[plc-prkc-uk-open-ideas-countries]"
+                        xtype="tags"/>
+                </items>
+            </tags>
+        </items>
+    </items>
+</jcr:root>

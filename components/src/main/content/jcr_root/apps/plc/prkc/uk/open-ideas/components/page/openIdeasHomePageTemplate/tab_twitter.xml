@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Twitter">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <list
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <item jcr:primaryType="cq:Panel">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <account
+                            jcr:primaryType="cq:Widget"
+                            name="./accounts"
+                            xtype="multifield">
+                            <fieldConfig
+                                jcr:primaryType="nt:unstructured"
+                                boxMinWidth="200"
+                                fieldLabel="Twitter account"
+                                maxLength="15"
+                                maxLengthText="Twitter usernames must be less than 15 characters."
+                                xtype="textfield"/>
+                        </account>
+                    </items>
+                </item>
+            </items>
+        </list>
+    </items>
+</jcr:root>

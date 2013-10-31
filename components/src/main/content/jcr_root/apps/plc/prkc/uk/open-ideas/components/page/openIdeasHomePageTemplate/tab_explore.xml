@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Explore">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <selector
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}true"
+            title="Sector"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <item jcr:primaryType="cq:Panel">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <tags
+                            jcr:primaryType="cq:Widget"
+                            editable="{Boolean}false"
+                            name="./sectors"
+                            xtype="multifield">
+                            <fieldConfig
+                                jcr:primaryType="cq:Widget"
+                                boxMinWidth="300"
+                                rootPath="/etc/tags/plc-prkc-uk-open-ideas-categories"
+                                xtype="pathfield"/>
+                        </tags>
+                    </items>
+                </item>
+            </items>
+        </selector>
+        <theme
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}true"
+            collapsible="{Boolean}true"
+            title="Theme"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <item jcr:primaryType="cq:Panel">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <tags
+                            jcr:primaryType="cq:Widget"
+                            name="./themes"
+                            xtype="multifield">
+                            <fieldConfig
+                                jcr:primaryType="cq:Widget"
+                                boxMinWidth="300"
+                                rootPath="/etc/tags/plc-prkc-uk-open-ideas-themes"
+                                xtype="pathfield"/>
+                        </tags>
+                    </items>
+                </item>
+            </items>
+        </theme>
+        <region
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}true"
+            collapsible="{Boolean}true"
+            title="Region"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <item jcr:primaryType="cq:Panel">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <tags
+                            jcr:primaryType="cq:Widget"
+                            name="./regions"
+                            xtype="multifield">
+                            <fieldConfig
+                                jcr:primaryType="cq:Widget"
+                                boxMinWidth="300"
+                                rootPath="/etc/tags/plc-prkc-uk-open-ideas-regions"
+                                xtype="pathfield"/>
+                        </tags>
+                    </items>
+                </item>
+            </items>
+        </region>
+    </items>
+</jcr:root>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Editor's Choice"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Tab 1">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <link
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Please select the link of the article you wish to promote instead of the latest Editor's Choice"
+                        fieldLabel="Article Link"
+                        fieldSubLabel="If left empty, latest editor's choice article will show"
+                        name="./articleurl"
+                        rootPath="/content/plc/prkc/uk/open-ideas/en/articles"
+                        xtype="pathfield"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

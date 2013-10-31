@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    helpPath="en/cq/current/wcm/default_components.html#List"
+    manageTabs="function(tab,noSwitch){var tabs=['props','children','static','search','querybuilder','tags'];var index=tabs.indexOf(tab);if(index==-1) return;for(var i=1;i&lt;tabs.length;i++){if(index==i){this.unhideTabStripItem(i);}else{this.hideTabStripItem(i);}}this.doLayout();if(!noSwitch)this.activate(index);}"
+    title="List"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <static
+            jcr:primaryType="cq:Widget"
+            title="Messages"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <messages
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Click the '+' to add a new message"
+                    fieldLabel="Messages"
+                    name="./messages"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="cq:Widget"
+                        width="155"
+                        xtype="messagefield"/>
+                </messages>
+            </items>
+        </static>
+    </items>
+</jcr:root>

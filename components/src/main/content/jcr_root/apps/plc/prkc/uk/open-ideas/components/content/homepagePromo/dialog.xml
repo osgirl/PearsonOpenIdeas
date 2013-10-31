@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Homepage Promo"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <choice
+                jcr:primaryType="cq:Panel"
+                title="Homepage Promo Type">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <promoType
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Promo Type"
+                        name="./promotype"
+                        type="radiogroup"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <selectLink
+                                jcr:primaryType="cq:Widget"
+                                text="Automatic via link"
+                                value="articlelink"/>
+                            <manual
+                                jcr:primaryType="cq:Widget"
+                                text="Manual (You choose text and image)"
+                                value="manual"/>
+                        </options>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            selectionchanged="function(field){var tabpanel = field.findParentByType('tabpanel');if (field.getValue() == 'articlelink') {tabpanel.unhideTabStripItem(1);tabpanel.hideTabStripItem(2);tabpanel.hideTabStripItem(3);tabpanel.hideTabStripItem(4);} else {tabpanel.hideTabStripItem(1);tabpanel.unhideTabStripItem(2);tabpanel.unhideTabStripItem(3);tabpanel.unhideTabStripItem(4);}}"/>
+                    </promoType>
+                </items>
+            </choice>
+            <linkOnly
+                jcr:primaryType="cq:Panel"
+                title="Article Link">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <link
+                        jcr:primaryType="cq:Widget"
+                        editable="{Boolean}false"
+                        fieldDescription="Please select the link of the article you wish to promote"
+                        fieldLabel="Article Link"
+                        name="./articleurl"
+                        rootPath="/content/plc/prkc/uk/open-ideas/en/articles"
+                        xtype="pathfield"/>
+                </items>
+            </linkOnly>
+            <manualInfo
+                jcr:primaryType="cq:Panel"
+                title="Promo Info">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <link
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Please enter the link for the page you wish to promote (if external, must start with http://)"
+                        fieldLabel="Promo Item Url"
+                        name="./promourl"
+                        rootPath="/content/plc/prkc/uk/open-ideas/en"
+                        xtype="pathfield"/>
+                    <promoText
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Please enter your promo text"
+                        fieldLabel="Promo Text"
+                        name="./promotext"
+                        xtype="textarea"/>
+                </items>
+            </manualInfo>
+            <image
+                jcr:primaryType="cq:Widget"
+                cropParameter="./image/imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./image/fileName"
+                fileReferenceParameter="./image/fileReference"
+                mapParameter="./image/imageMap"
+                name="./image/file"
+                requestSuffix="/image.img.png"
+                rotateParameter="./image/imageRotate"
+                sizeLimit="100"
+                title="Image"
+                xtype="html5smartimage"/>
+            <advanced
+                jcr:primaryType="cq:Widget"
+                title="Advanced Image Properties"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Title"
+                        name="./image/jcr:title"
+                        xtype="textfield"/>
+                    <alt
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="(leave empty to use the title defined above)"
+                        fieldLabel="Alt Text"
+                        name="./image/alt"
+                        xtype="textfield"/>
+                    <linkURL
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Drop files or pages from the Content Finder"
+                        fieldLabel="Link to"
+                        name="./image/linkURL"
+                        xtype="pathfield"/>
+                    <description
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Description"
+                        name="./image/jcr:description"
+                        xtype="textarea"/>
+                    <size
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Size"
+                        heightParameter="./image/height"
+                        widthParameter="./image/width"
+                        xtype="sizefield"/>
+                    <resType
+                        jcr:primaryType="cq:Widget"
+                        ignoreData="{Boolean}true"
+                        name="./image/sling:resourceType"
+                        value="foundation/components/image"
+                        xtype="hidden"/>
+                </items>
+            </advanced>
+        </items>
+    </items>
+</jcr:root>

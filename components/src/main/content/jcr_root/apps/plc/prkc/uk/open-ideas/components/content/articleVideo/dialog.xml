@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Youtube Video URL"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <youtubeURL
+            jcr:primaryType="cq:Widget"
+            title="Video Info"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <youtubeVideoURL
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="i.e. &quot;&amp;lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&lt;URL> frameborder=&quot;0&quot; allowfullscreen>&amp;lt;/iframe>&quot;"
+                    fieldLabel="Youtube Video URL"
+                    fieldSubLabel="Use the &quot;embed&quot; YouTube URL for this"
+                    name="./videoURL"
+                    xtype="textfield"/>
+                <file
+                    jcr:primaryType="cq:Widget"
+                    autoUploadDelay="1"
+                    ddAccept="[text/plain]"
+                    ddGroups="[media]"
+                    fieldLabel="Transcript"
+                    fileNameParameter="./fileName"
+                    fileReferenceParameter="./fileReference"
+                    name="./file"
+                    xtype="html5smartfile"/>
+            </items>
+        </youtubeURL>
+    </items>
+</jcr:root>

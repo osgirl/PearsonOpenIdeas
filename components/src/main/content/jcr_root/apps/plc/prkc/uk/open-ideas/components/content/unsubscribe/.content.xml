@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:description="This component allows the user to visit the page this component is placed on to unsubscribe from receiving more emails."
+    jcr:primaryType="cq:Component"
+    jcr:title="Unsubscribe"
+    allowedParents="[*/prasys]"
+    componentGroup="Pearson Open Ideas - Account"/>

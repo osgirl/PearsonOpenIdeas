@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:description="Michael Barber comes from a long line of barbers. "
+    jcr:lastModified="{Date}2013-05-10T11:16:34.027-04:00"
+    jcr:primaryType="cq:Tag"
+    jcr:title="Michael Barber"
+    sling:resourceType="cq/tagging/components/tag"/>

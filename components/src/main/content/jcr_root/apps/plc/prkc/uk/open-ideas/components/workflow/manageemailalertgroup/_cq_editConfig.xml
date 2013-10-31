@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:dialogMode="floating"
+    cq:inherit="{Boolean}true"
+    cq:lastReplicated="{Date}2013-01-31T10:25:34.131Z"
+    cq:lastReplicatedBy="admin"
+    cq:lastReplicationAction="Activate"
+    jcr:mixinTypes="[cq:ReplicationStatus]"
+    jcr:primaryType="cq:EditConfig">
+    <cq:formParameters
+        jcr:description="A process to manage the email alert group"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Manage Email Alert Group"
+        PROCESS="com.pearson.openideas.cq5.components.workflows.ManageEmailAlertGroup"
+        PROCESS_AUTO_ADVANCE="true"/>
+</jcr:root>

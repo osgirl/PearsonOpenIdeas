@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Advanced Image Properties">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <title
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Title"
+            name="./image/jcr:title"
+            xtype="textfield"/>
+        <alt
+            jcr:primaryType="cq:Widget"
+            allowBlank="{Boolean}false"
+            fieldDescription="(leave empty to use the title defined above)"
+            fieldLabel="Alt Text"
+            name="./image/alt"
+            xtype="textfield"/>
+        <linkURL
+            jcr:primaryType="cq:Widget"
+            fieldDescription="Drop files or pages from the Content Finder"
+            fieldLabel="Link to"
+            name="./image/linkURL"
+            xtype="pathfield"/>
+        <description
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Description"
+            name="./image/jcr:description"
+            xtype="textarea"/>
+        <size
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Size"
+            heightParameter="./image/height"
+            widthParameter="./image/width"
+            xtype="sizefield"/>
+        <resType
+            jcr:primaryType="cq:Widget"
+            ignoreData="{Boolean}true"
+            name="./image/sling:resourceType"
+            value="foundation/components/image"
+            xtype="hidden"/>
+    </items>
+</jcr:root>

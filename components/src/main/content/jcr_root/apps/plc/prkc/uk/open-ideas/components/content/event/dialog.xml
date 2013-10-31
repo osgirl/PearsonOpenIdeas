@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <event
+                jcr:primaryType="cq:Panel"
+                title="Event">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <name
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="Enter the name of the event"
+                        fieldLabel="Event Name"
+                        name="./eventName"
+                        xtype="textfield"/>
+                    <location
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="Enter the location of the event"
+                        fieldLabel="Event Location"
+                        name="./eventLocation"
+                        xtype="textfield"/>
+                    <country
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="Enter the country of the event"
+                        fieldLabel="Event Country"
+                        name="./eventCountry"
+                        xtype="textfield"/>
+                    <description
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="Enter the description of the event"
+                        fieldLabel="Event description"
+                        name="./eventDescription"
+                        xtype="textfield"/>
+                    <urlText
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="This text will be linked to the website in the URL field"
+                        fieldLabel="URL Text"
+                        fieldSubLabel="(Optional)"
+                        name="./urlText"
+                        xtype="textfield"/>
+                    <url
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="The URL link for this Event. For example, http://eventhomepage.com"
+                        fieldLabel="URL:"
+                        fieldSubLabel="(Optional)"
+                        name="./eventUrl"
+                        xtype="textfield"/>
+                    <newPublishDate
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="Enter the date of this event"
+                        fieldLabel="Date"
+                        name="./eventDate"
+                        xtype="textfield"/>
+                </items>
+            </event>
+            <imagetab
+                jcr:primaryType="cq:Widget"
+                path="/apps/plc/prkc/uk/open-ideas/components/dialog/tabs/imagetab.infinity.json"
+                xtype="cqinclude"/>
+            <advancedimagetab
+                jcr:primaryType="cq:Widget"
+                path="/apps/plc/prkc/uk/open-ideas/components/dialog/tabs/advancedimagetab.infinity.json"
+                xtype="cqinclude"/>
+        </items>
+    </items>
+</jcr:root>

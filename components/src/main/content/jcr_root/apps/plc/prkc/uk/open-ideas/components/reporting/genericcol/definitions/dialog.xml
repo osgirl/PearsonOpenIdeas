@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Generic column"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <defs
+                jcr:primaryType="cq:Widget"
+                jcr:title="Definitions"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <name
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Title"
+                        name="./jcr:title"
+                        xtype="textfield"/>
+                    <property
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="The property to take the column's data from"
+                        fieldLabel="Property"
+                        name="./definitions/queryBuilder/property"
+                        xtype="textfield"/>
+                    <subPath
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Entering 'profile' should be sufficient in most cases"
+                        fieldLabel="Path"
+                        name="./definitions/queryBuilder/subPath"
+                        xtype="textfield"/>
+                    <type
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Type"
+                        name="./definitions/type"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <string
+                                jcr:primaryType="nt:unstructured"
+                                text="String"
+                                value="string"/>
+                            <number
+                                jcr:primaryType="nt:unstructured"
+                                text="Number"
+                                value="number"/>
+                            <int
+                                jcr:primaryType="nt:unstructured"
+                                text="Integer"
+                                value="int"/>
+                            <date
+                                jcr:primaryType="nt:unstructured"
+                                text="Date"
+                                value="date"/>
+                        </options>
+                    </type>
+                    <defaultagg
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="Default aggregate"
+                        name="./defaults/aggregate"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <count
+                                jcr:primaryType="nt:unstructured"
+                                text="Count"
+                                value="count"/>
+                            <min
+                                jcr:primaryType="nt:unstructured"
+                                text="Minimum"
+                                value="min"/>
+                            <avg
+                                jcr:primaryType="nt:unstructured"
+                                text="Average"
+                                value="average"/>
+                            <max
+                                jcr:primaryType="nt:unstructured"
+                                text="Maximum"
+                                value="max"/>
+                            <sum
+                                jcr:primaryType="nt:unstructured"
+                                text="Sum"
+                                value="sum"/>
+                        </options>
+                    </defaultagg>
+                </items>
+            </defs>
+            <extended
+                jcr:primaryType="cq:Widget"
+                jcr:title="Extended"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <aggregates
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Note that this will configure the aggregates available from the column's header menu."
+                        fieldLabel="Available aggregates"
+                        name="./definitions/aggregates"
+                        resetPath="../aggregate"
+                        textProperty="text"
+                        valueProperty="type"
+                        xtype="repmultiselector">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <count
+                                jcr:primaryType="nt:unstructured"
+                                text="Count"
+                                value="count"/>
+                            <min
+                                jcr:primaryType="nt:unstructured"
+                                text="Minimum"
+                                value="min"/>
+                            <avg
+                                jcr:primaryType="nt:unstructured"
+                                text="Average"
+                                value="average"/>
+                            <max
+                                jcr:primaryType="nt:unstructured"
+                                text="Maximum"
+                                value="max"/>
+                            <sum
+                                jcr:primaryType="nt:unstructured"
+                                text="Sum"
+                                value="sum"/>
+                        </options>
+                    </aggregates>
+                    <filters
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Filters"
+                        name="./definitions/filters"
+                        valueProperty="id"
+                        xtype="repmultiselector">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <string
+                                jcr:primaryType="nt:unstructured"
+                                addProperties="[filterType]"
+                                addValues="[string]"
+                                text="Text filter"
+                                value="string"/>
+                        </options>
+                    </filters>
+                </items>
+            </extended>
+        </items>
+    </items>
+</jcr:root>

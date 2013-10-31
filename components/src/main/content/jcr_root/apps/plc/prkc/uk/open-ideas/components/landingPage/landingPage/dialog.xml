@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    helpPath="en/cq/current/wcm/default_components.html#Parbase"
+    title="Category Filter Component"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <title
+            jcr:primaryType="cq:Widget"
+            title="Landing Page Type"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <selection
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Select what kind of tags this landing page should load"
+                    fieldLabel="Landing Page Type:"
+                    fieldSubLabel="Refresh the page to fully see this change."
+                    name="./landingPageType"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <category
+                            jcr:primaryType="cq:Widget"
+                            text="Sector Category"
+                            value="plc-prkc-uk-open-ideas-categories"/>
+                        <themes
+                            jcr:primaryType="cq:Widget"
+                            text="Themes"
+                            value="plc-prkc-uk-open-ideas-themes"/>
+                        <regions
+                            jcr:primaryType="cq:Widget"
+                            text="Region"
+                            value="plc-prkc-uk-open-ideas-regions"/>
+                    </options>
+                </selection>
+            </items>
+        </title>
+    </items>
+</jcr:root>

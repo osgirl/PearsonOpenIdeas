@@ -599,6 +599,19 @@
                <artifactId>json</artifactId>
                <version>20090211</version>
            </dependency>
+
+           <!-- 3rd party Libraries -->
+           <dependency>
+               <groupId>org.twitter4j</groupId>
+               <artifactId>twitter4j-core</artifactId>
+               <version>3.0.4</version>
+           </dependency>
+           <dependency>
+               <groupId>com.google.code.gson</groupId>
+               <artifactId>gson</artifactId>
+               <version>2.2.4</version>
+           </dependency>
+
            
     </dependencies>
     </dependencyManagement>
@@ -625,7 +638,19 @@
                 <plugin>
                     <groupId>org.apache.felix</groupId>
                     <artifactId>maven-bundle-plugin</artifactId>
-                    <version>2.1.0</version>
+                    <!--<version>2.1.0</version>-->
+                    <version>2.3.7</version>
+
+                    <!--Configuration to deploy 3rd party library (http://www.cqblueprints.com/tipsandtricks/build-and-deploy-osgi/deploy-third-party-libs.html)-->
+                    <configuration>
+                        <instructions>
+                            <Embed-Dependency>*;scope=compile|runtime</Embed-Dependency>
+                            <_exportcontents>
+                                <!--org.twitter4j.*;version=3.0.4,-->
+                            </_exportcontents>
+                        </instructions>
+                    </configuration>
+
                 </plugin>
                 <plugin>
                     <groupId>org.apache.felix</groupId>

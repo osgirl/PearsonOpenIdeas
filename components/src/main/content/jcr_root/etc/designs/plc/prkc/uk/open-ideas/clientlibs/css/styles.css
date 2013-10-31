@@ -1,0 +1,49 @@
+.twitterFeedArea{
+    margin-bottom: 30px;
+    width: 200px;
+}
+
+.twitterFeedTitle{
+    color: blue;
+}
+
+.getTweets{
+    margin-top: 10px;
+}
+
+.header-article{
+    margin-bottom: -45px;
+}
+
+.twitter-article{
+    margin-bottom: 30px;
+    width: 40%;
+}
+
+.twitter-image{
+    display: inline;
+    float: right;
+    position: relative;
+    top: -50px;
+}
+
+.twitter-name{
+    display: inline;
+    top: -35px;
+    position: relative;
+    left: 10px;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.twitter-screen-name{
+    display: inline;
+    position: relative;
+    top: -30px;
+    left: 60px;
+}
+
+#twitter-feed{
+    height: 200px;
+    overflow: scroll;
+}

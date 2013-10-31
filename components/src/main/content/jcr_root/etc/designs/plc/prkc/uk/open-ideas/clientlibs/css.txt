@@ -6,3 +6,6 @@ jquery.mCustomScrollbar.css
 main.2.css
 comments.css
 tooltip.css
+
+styles.css
+

@@ -9,3 +9,6 @@ main.js
 filterby.js
 fixForms.js
 dectectDeviceOrientation.js
+
+twitter-feed-page.js
+jquery.slimscroll.min.js

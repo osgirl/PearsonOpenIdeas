@@ -4,12 +4,12 @@
     <facet type="Osmorc" name="OSGi">
       <configuration manifestGenerationMode="OsmorcControlled" manifestLocation="" jarfileLocation="pearson-openideas-component-libraries-1.13.0-SNAPSHOT.jar" outputPathType="CompilerOutputPath" bndFileLocation="" bundlorFileLocation="" bundleActivator="com.pearson.openideas.cq5.components.Activator" bundleSymbolicName="pearson-openideas-component-libraries" bundleVersion="1.13.0-SNAPSHOT" ignoreFilePattern="" useProjectDefaultManifestFileLocation="true" alwaysRebuildBundleJAR="false" doNotSynchronizeWithMaven="false">
         <additionalProperties>
+          <property key="Bundle-Description" value="OSGI Bundle containing component libraries for the Pearson Open Ideas Project." />
           <property key="Import-Package" value="*" />
           <property key="Export-Package" value="com.crownpartners.cq.quickstart.core.*;version=1.13.0-SNAPSHOT,com.pearson.openideas.cq5.components.*;version=1.13.0-SNAPSHOT" />
           <property key="Embed-Dependency" value="*;scope=compile|runtime" />
           <property key="Include-Resource" value="json-20090211.jar=$MAVEN_REPOSITORY$/org/json/json/20090211/json-20090211.jar,twitter4j-core-3.0.4.jar=$MAVEN_REPOSITORY$/org/twitter4j/twitter4j-core/3.0.4/twitter4j-core-3.0.4.jar,gson-2.2.4.jar=$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar" />
           <property key="Bundle-Name" value="Pearson Open Ideas CQ5 Component Libraries" />
-          <property key="Bundle-Description" value="OSGI Bundle containing component libraries for the Pearson Open Ideas Project." />
           <property key="Bundle-ClassPath" value=".,json-20090211.jar,twitter4j-core-3.0.4.jar,gson-2.2.4.jar" />
           <property key="Embedded-Artifacts" value="json-20090211.jar;g=&quot;org.json&quot;;a=&quot;json&quot;;v=&quot;20090211&quot;,twitter4j-core-3.0.4.jar;g=&quot;org.twitter4j&quot;;a=&quot;twitter4j-core&quot;;v=&quot;3.0.4&quot;,gson-2.2.4.jar;g=&quot;com.google.code.gson&quot;;a=&quot;gson&quot;;v=&quot;2.2.4&quot;" />
         </additionalProperties>

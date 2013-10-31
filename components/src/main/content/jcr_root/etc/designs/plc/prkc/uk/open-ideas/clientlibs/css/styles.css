@@ -46,4 +46,11 @@
 #twitter-feed{
     height: 200px;
     overflow: scroll;
+    font-family: 'GillSansMTProMedium', arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.2em;
+}
+
+.twitter-paragraph{
+    margin-top: 25px;
 }

@@ -7,5 +7,5 @@
     jcr:mixinTypes="[cq:ReplicationStatus]"
     jcr:primaryType="cq:Component"
     jcr:title="Twitter Panel"
-    allowedParents="[]"
+    allowedParents="[*/parsys]"
     componentGroup="Pearson UK"/>

@@ -36,10 +36,10 @@
                         html += "<img src=\"" + profile_image_url + "\" alt=\"" + user_screenName + " avatar\" />"
                         html += "<div class='twitter-name'>" + from_user + "</div><br>";
                         html += "<div class='twitter-screen-name'>" + user_screenName + "</div>";
-                        html += "<div class='twitter-image'><img src='/etc/designs/plc/prkc/uk/open-ideas/clientlibs/img/twitter_icon.png'></div>";
+                        html += "<div class='twitter-image'><img src='/etc/designs/plc/prkc/uk/open-ideas/clientlibs/img/twitter_icon.png'/></div>";
                         html += "</div>";
                         var dateOfTweet = data['results'][res]['createdAt'];
-                        html += "<p>" + text + ", " + dateOfTweet + "</p>";
+                        html += "<p class='twitter-paragraph'>" + text + ", " + dateOfTweet + "</p>";
                         html += "</article>";
                         tweets.append(html);
                         // After last tweet added call inner scroll function

@@ -1381,14 +1381,13 @@ section .image small{
 
 /*For the twitter panel widget*/
 
+
+
 .twitterPanel-container{
     float: left;
     width: 285px;
 }
 
-.twitterpanel{
-    margin-top: 50px;
-}
 
 
 

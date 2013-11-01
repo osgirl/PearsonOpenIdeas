@@ -47,9 +47,10 @@
     font-size: 12px;
     line-height: 1em;
     width: 600px;
-    max-height: 80px;
+    max-height: 95px;
+    margin-top: 35px;
 }
 
 .twitter-paragraph{
-    margin-top: 25px;
+    margin-top: 30px;
 }

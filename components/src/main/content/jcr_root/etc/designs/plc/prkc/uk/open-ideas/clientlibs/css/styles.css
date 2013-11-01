@@ -16,12 +16,10 @@
 }
 
 .twitter-article{
-    margin-bottom: 30px;
-    width: 40%;
+
 }
 
 .twitter-image{
-    display: inline;
     float: right;
     position: relative;
     top: -50px;
@@ -44,11 +42,12 @@
 }
 
 #twitter-feed{
-    height: 200px;
     overflow: scroll;
     font-family: 'GillSansMTProMedium', arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.2em;
+    font-size: 12px;
+    line-height: 1em;
+    width: 600px;
+    max-height: 80px;
 }
 
 .twitter-paragraph{

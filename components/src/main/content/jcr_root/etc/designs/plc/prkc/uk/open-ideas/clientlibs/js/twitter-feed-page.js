@@ -6,9 +6,11 @@
         var tweets = $("#twitter-feed");
         var twitterAccounts = tweets.attr("data-twitter-accounts");
         var maxTweetcount = 5;
-        var arrayTwitterAccounts = twitterAccounts.split(",");
+
 
         if(typeof(twitterAccounts) != 'undefined' && twitterAccounts.length > 0 ) {
+
+            var arrayTwitterAccounts = twitterAccounts.split(",");
 
             $.ajax({
                 url: '/bin/twitterServlet',

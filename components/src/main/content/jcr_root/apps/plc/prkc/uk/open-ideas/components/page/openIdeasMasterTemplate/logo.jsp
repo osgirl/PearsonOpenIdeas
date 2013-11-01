@@ -5,4 +5,10 @@
 	       <p class="about-text">Where the education community and policy-makers come together for cutting-edge, market-leading information on education. <br />
 	       <a href="/content/plc/prkc/uk/open-ideas/en/about-us.html" class="about-read-more">READ MORE ABOUT US</a></p>
 	   </div>
+
+        <div class="twitterPanel-container">
+            <cq:include path="twitterPar" resourceType="foundation/components/iparsys"/>
+        </div>
+
+
 </header>

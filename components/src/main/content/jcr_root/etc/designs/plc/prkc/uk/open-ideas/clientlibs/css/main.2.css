@@ -1378,6 +1378,21 @@ section .image small{
     margin: 55px 0 0 50px;
     width: 285px;
 }
+
+/*For the twitter panel widget*/
+
+.twitterPanel-container{
+    float: left;
+    width: 285px;
+}
+
+.twitterpanel{
+    margin-top: 50px;
+}
+
+
+
+
 .main-navigation .home-li{
     width:5.2%;
 }

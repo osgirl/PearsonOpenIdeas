@@ -5,7 +5,8 @@ $(document).ready(function(){
 	if(self == top){
 		document.documentElement.style.display = 'block';
 	}else{
-		top.location = self.location;
+		//top.location = self.location;
+        document.documentElement.style.display = 'block';
 	}
 
 	//check for iPad

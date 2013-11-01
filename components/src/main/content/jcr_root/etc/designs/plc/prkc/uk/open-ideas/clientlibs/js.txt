@@ -10,3 +10,4 @@ filterby.js
 fixForms.js
 dectectDeviceOrientation.js
 
+twitter-feed-page.js

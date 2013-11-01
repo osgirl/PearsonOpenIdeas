@@ -1,4 +1,4 @@
-package com.pearson.openideas.cq5.components.factory;
+package com.pearson.openideas.cq5.components.twitter.factory;
 
 import twitter4j.Twitter;
 import twitter4j.TwitterFactory;

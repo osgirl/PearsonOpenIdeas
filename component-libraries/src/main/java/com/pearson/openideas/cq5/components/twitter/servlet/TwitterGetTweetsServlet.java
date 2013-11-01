@@ -1,8 +1,10 @@
-package com.pearson.openideas.cq5.components.servlets;
+package com.pearson.openideas.cq5.components.twitter.servlet;
 
 import com.google.gson.Gson;
-import com.pearson.openideas.cq5.components.compare.TwitterDateComparator;
-import com.pearson.openideas.cq5.components.factory.TwitterAccountFactory;
+import com.pearson.openideas.cq5.components.twitter.beans.Tweet;
+import com.pearson.openideas.cq5.components.twitter.beans.User;
+import com.pearson.openideas.cq5.components.twitter.compare.TwitterDateComparator;
+import com.pearson.openideas.cq5.components.twitter.factory.TwitterAccountFactory;
 import org.apache.felix.scr.annotations.sling.SlingServlet;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
@@ -41,7 +43,7 @@ public class TwitterGetTweetsServlet extends SlingAllMethodsServlet
         String maxTweetcount = request.getParameter("maxTweetcount");
         int maxTweetsPerComponent = Integer.parseInt(maxTweetcount);
 
-        List<Status> listConcatenatedStatuses = new ArrayList<Status>();
+        List<Tweet> listConcatenatedStatuses = new ArrayList<Tweet>();
         for (String str : usernames)
         {
             TwitterAccountFactory twitterAccountFactory = new TwitterAccountFactory();
@@ -55,7 +57,7 @@ public class TwitterGetTweetsServlet extends SlingAllMethodsServlet
         // remove elements only if size is smaller than max tweets
         if (listConcatenatedStatuses.size() > maxTweetsPerComponent)
         {
-            Collection<Status> toBeRemoved = listConcatenatedStatuses.subList(maxTweetsPerComponent, listConcatenatedStatuses.size() );
+            Collection<Tweet> toBeRemoved = listConcatenatedStatuses.subList(maxTweetsPerComponent, listConcatenatedStatuses.size() );
             listConcatenatedStatuses.removeAll(toBeRemoved);
         }
 
@@ -67,9 +69,11 @@ public class TwitterGetTweetsServlet extends SlingAllMethodsServlet
         response.getWriter().write(stringGson);
     }
 
-    private List<Status> getTwitterStatusList(Twitter twitter, String username, int maxTweetCount) throws UnsupportedEncodingException
+    private List<Tweet> getTwitterStatusList(Twitter twitter, String username, int maxTweetCount) throws UnsupportedEncodingException
     {
         List<Status> statuses = new ArrayList<Status>();
+        List<Tweet> tweets = new ArrayList<Tweet>();
+
         try
         {
             Paging paging = new Paging(1, maxTweetCount);
@@ -77,9 +81,30 @@ public class TwitterGetTweetsServlet extends SlingAllMethodsServlet
         }
         catch (TwitterException e)
         {
-            LOGGER.error("Error twitter...");
+            LOGGER.error("Error when getting twitter user' s timeline...");
         }
 
-        return statuses;
+        for (Status status : statuses)
+        {
+            tweets.add(buildTweetObject(status));
+        }
+
+        return tweets;
+    }
+
+    private Tweet buildTweetObject( Status status )
+    {
+        User user = new User();
+        user.setName(status.getUser().getName());
+        user.setScreenName(status.getUser().getScreenName());
+        user.setProfileImageUrl(status.getUser().getProfileImageURL());
+
+        Tweet tweet = new Tweet();
+        tweet.setUser(user);
+        tweet.setText(status.getText());
+        tweet.setCreatedAt(status.getCreatedAt());
+        tweet.setId(String.valueOf(status.getId()));
+
+        return tweet;
     }
 }

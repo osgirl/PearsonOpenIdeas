@@ -11,3 +11,4 @@ fixForms.js
 dectectDeviceOrientation.js
 
 twitter-feed-page.js
+date.js

@@ -16,7 +16,7 @@
 	</parent>
 	
 	<description>Root Project for Pearson Open Ideas Project </description>
-	
+
 	<modules>
         <!-- <module>configuration</module> -->
         <module>component-libraries</module>

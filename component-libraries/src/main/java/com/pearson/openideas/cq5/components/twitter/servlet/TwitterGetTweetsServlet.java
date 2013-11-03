@@ -6,9 +6,11 @@ import com.pearson.openideas.cq5.components.twitter.beans.User;
 import com.pearson.openideas.cq5.components.twitter.compare.TwitterDateComparator;
 import com.pearson.openideas.cq5.components.twitter.factory.TwitterAccountFactory;
 import org.apache.felix.scr.annotations.sling.SlingServlet;
+
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.servlets.SlingAllMethodsServlet;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import twitter4j.Paging;
@@ -34,7 +36,8 @@ import java.util.Map;
 @SlingServlet(paths="/bin/twitterServlet", methods = "GET", metatype=true)
 public class TwitterGetTweetsServlet extends SlingAllMethodsServlet
 {
-    private static final Logger LOGGER = LoggerFactory.getLogger(TwitterGetTweetsServlet.class);
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(com.pearson.openideas.cq5.components.twitter.servlet.TwitterGetTweetsServlet.class);
 
     @Override
     protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response) throws IOException

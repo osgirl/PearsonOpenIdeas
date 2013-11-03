@@ -12,22 +12,21 @@ import twitter4j.conf.ConfigurationBuilder;
 
 public class TwitterAccountFactory
 {
-    private static final String consumerKey = "KbXkX3X9vAPHfIwrkASXdA";
-    private static final String consumerSecret = "0ljYH0DigNUQ4SOCuXm6NPUAeYdN6zbxzsYHYzmq380";
-    private static final String accessToken = "117012393-gZ4crhozO7QHEUlQkI0QMmg9iyCdnm1soS4MMRyE";
-    private static final String accessTokenSecret = "rmdAK3DEvR6HkVTMM12CghsUTlOFBJBQ02vQQJFSIg";
+    private static final String CONSUMER_KEY = "KbXkX3X9vAPHfIwrkASXdA";
+    private static final String CONSUMER_SECRET = "0ljYH0DigNUQ4SOCuXm6NPUAeYdN6zbxzsYHYzmq380";
+    private static final String ACCESS_TOKEN = "117012393-gZ4crhozO7QHEUlQkI0QMmg9iyCdnm1soS4MMRyE";
+    private static final String ACCESS_TOKEN_SECRET = "rmdAK3DEvR6HkVTMM12CghsUTlOFBJBQ02vQQJFSIg";
 
-    protected Twitter twitter;
-    private ConfigurationBuilder configBuilder;
+    private Twitter twitter;
 
     public TwitterAccountFactory()
     {
-        configBuilder = new ConfigurationBuilder();
+        ConfigurationBuilder configBuilder = new ConfigurationBuilder();
         configBuilder.setDebugEnabled(true);
-        configBuilder.setOAuthConsumerKey(consumerKey);
-        configBuilder.setOAuthConsumerSecret(consumerSecret);
-        configBuilder.setOAuthAccessToken(accessToken);
-        configBuilder.setOAuthAccessTokenSecret(accessTokenSecret);
+        configBuilder.setOAuthConsumerKey(CONSUMER_KEY);
+        configBuilder.setOAuthConsumerSecret(CONSUMER_SECRET);
+        configBuilder.setOAuthAccessToken(ACCESS_TOKEN);
+        configBuilder.setOAuthAccessTokenSecret(ACCESS_TOKEN_SECRET);
 
         //use the ConfigBuilder.build() method and pass the result to the TwitterFactory
         TwitterFactory tf = new TwitterFactory(configBuilder.build());
@@ -40,4 +39,6 @@ public class TwitterAccountFactory
     {
         return twitter;
     }
+
+
 }

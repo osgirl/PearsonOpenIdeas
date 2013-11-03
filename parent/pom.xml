@@ -491,7 +491,7 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.6.4</version>
+            <version>1.5.11</version>
             <scope>provided</scope>
         </dependency>
         <!--Crown Quickstart Framework -->
@@ -612,8 +612,20 @@
                <version>2.2.4</version>
            </dependency>
 
-           
-    </dependencies>
+           <!--Mockito for unit testing-->
+           <dependency>
+               <groupId>org.mockito</groupId>
+               <artifactId>mockito-all</artifactId>
+               <version>1.9.5</version>
+           </dependency>
+
+           <dependency>
+               <groupId>com.tacitknowledge</groupId>
+               <artifactId>noexcuses</artifactId>
+               <version>1.1.0</version>
+           </dependency>
+
+       </dependencies>
     </dependencyManagement>
 
     <build>
@@ -660,7 +672,7 @@
                         <dependency>
                             <groupId>org.slf4j</groupId>
                             <artifactId>slf4j-simple</artifactId>
-                            <version>1.5.2</version>
+                            <version>1.5.11</version>
                         </dependency>
                     </dependencies>
                     <executions>

@@ -3,7 +3,7 @@
 
     $(function() {
 
-        var tweets = $("#twitter-feed");
+        var tweets = $("#twitter-feed-container");
         var twitterAccounts = tweets.attr("data-twitter-accounts");
         var maxTweetcount = 5;
 
@@ -16,10 +16,17 @@
                 url: '/bin/twitterServlet',
                 data: {arrayTwitterAccounts : arrayTwitterAccounts, maxTweetcount: maxTweetcount},
                 dataType: 'json',
+                async: false,
                 success: function(data) {
                     // loop around the result
                     $(".loading", tweets).remove();
                     var rescount = data['results'].length;
+
+                    tweets.clear();
+                    var html =
+                            "<div id='all-articles-marquee'>";
+
+
                     for (var res=0 ; res< data['results'].length; res++) {
                         var text = data['results'][res]['text'];
                         var from_user = data['results'][res]['user']['name'];
@@ -33,17 +40,23 @@
                                 .replace(/(^|\s)@(\w+)/g,'$1<a href="http://twitter.com/$2">@$2</a>');
 
                         text = text + '<br /><a href="http://www.twitter.com/' + user_screenName + '/status/' + id_str + '" class="datelink" target="_blank">' + created_at + '</a></div>';
-                        var html = "<article class='twitter-article'>";
-                        html += "<div class='header-article'>";
-                        html += "<img src=\"" + profile_image_url + "\" alt=\"" + user_screenName + " avatar\" />"
-                        html += "<div class='twitter-name'>" + from_user + "</div><br>";
-                        html += "<div class='twitter-screen-name'>" + "@" + user_screenName + "</div>";
-                        html += "<div class='twitter-image'><img src='/etc/designs/plc/prkc/uk/open-ideas/clientlibs/img/twitter_icon.png'/></div>";
-                        html += "</div>";
-                        html += "<p class='twitter-paragraph'>" + text +"</p>";
 
-                        html += "</article>";
-                        tweets.append(html);
+
+
+                        html += "<div class='twitter-article'>";
+                                    html += "<div class='header-article'>";
+                                        html += "<img src=\"" + profile_image_url + "\" alt=\"" + user_screenName + " avatar\" />"
+                                        html += "<div class='twitter-name'>" + from_user + "</div><br>";
+                                        html += "<div class='twitter-screen-name'>" + "@" + user_screenName + "</div>";
+                                        html += "<div class='twitter-image'><img src='/etc/designs/plc/prkc/uk/open-ideas/clientlibs/img/twitter_icon.png'/></div>";
+                                    html += "</div>";
+
+                                    html += "<p class='twitter-paragraph'>" + text +"</p>";
+
+                                html += "</div>";
+
+
+
 
                         // After last tweet added call inner scroll function
 
@@ -55,7 +68,13 @@
 //                            }
 //                        }
 
+                        // finally append....
+
+
                     }
+
+                    html += "</div>";
+                    tweets.append(html);
                 }
             });
         }

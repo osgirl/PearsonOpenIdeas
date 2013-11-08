@@ -41,17 +41,22 @@
     left: 60px;
 }
 
-#twitter-feed{
-    overflow: scroll;
+#twitter-feed-container{
+    overflow: hidden;
     font-family: 'GillSansMTProMedium', arial, sans-serif;
     font-size: 12px;
     line-height: 1em;
     width: 600px;
     max-height: 95px;
     margin-top: 35px;
+    position: relative;
 }
 
 .twitter-paragraph{
     margin-top: 30px;
     word-wrap: break-word;
+}
+
+#all-articles-marquee{
+    position: relative;
 }

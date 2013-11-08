@@ -22,9 +22,9 @@ if (accounts!= null) {
         }
     }
 %>
-<section class="panel" id="twitter-feed" data-scroll="true" data-twitter-accounts='<%=twitterAccounts%>' data-tweet-count='10'>
+<div class="panel" id="twitter-feed-container" data-scroll="true" data-twitter-accounts='<%=twitterAccounts%>' data-tweet-count='10'>
     <p class="loading">Loading twitter feeds for accounts. Refresh page to see results</p>
-</section>
+</div>
 <%        
 }
 else{

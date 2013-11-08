@@ -8,10 +8,10 @@
           <property key="Import-Package" value="*" />
           <property key="Export-Package" value="com.crownpartners.cq.quickstart.core.*;version=1.13.0-SNAPSHOT,com.pearson.openideas.cq5.components.*;version=1.13.0-SNAPSHOT" />
           <property key="Embed-Dependency" value="*;scope=compile|runtime" />
-          <property key="Include-Resource" value="commons-lang-2.4.jar=$MAVEN_REPOSITORY$/commons-lang/commons-lang/2.4/commons-lang-2.4.jar,json-20090211.jar=$MAVEN_REPOSITORY$/org/json/json/20090211/json-20090211.jar,twitter4j-core-3.0.4.jar=$MAVEN_REPOSITORY$/org/twitter4j/twitter4j-core/3.0.4/twitter4j-core-3.0.4.jar,gson-2.2.4.jar=$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar,mockito-all-1.9.5.jar=$MAVEN_REPOSITORY$/org/mockito/mockito-all/1.9.5/mockito-all-1.9.5.jar,noexcuses-1.1.0.jar=$MAVEN_REPOSITORY$/com/tacitknowledge/noexcuses/1.1.0/noexcuses-1.1.0.jar" />
+          <property key="Include-Resource" value="json-20090211.jar=$MAVEN_REPOSITORY$/org/json/json/20090211/json-20090211.jar,twitter4j-core-3.0.4.jar=$MAVEN_REPOSITORY$/org/twitter4j/twitter4j-core/3.0.4/twitter4j-core-3.0.4.jar,gson-2.2.4.jar=$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar" />
           <property key="Bundle-Name" value="Pearson Open Ideas CQ5 Component Libraries" />
-          <property key="Bundle-ClassPath" value=".,commons-lang-2.4.jar,json-20090211.jar,twitter4j-core-3.0.4.jar,gson-2.2.4.jar,mockito-all-1.9.5.jar,noexcuses-1.1.0.jar" />
-          <property key="Embedded-Artifacts" value="commons-lang-2.4.jar;g=&quot;commons-lang&quot;;a=&quot;commons-lang&quot;;v=&quot;2.4&quot;,json-20090211.jar;g=&quot;org.json&quot;;a=&quot;json&quot;;v=&quot;20090211&quot;,twitter4j-core-3.0.4.jar;g=&quot;org.twitter4j&quot;;a=&quot;twitter4j-core&quot;;v=&quot;3.0.4&quot;,gson-2.2.4.jar;g=&quot;com.google.code.gson&quot;;a=&quot;gson&quot;;v=&quot;2.2.4&quot;,mockito-all-1.9.5.jar;g=&quot;org.mockito&quot;;a=&quot;mockito-all&quot;;v=&quot;1.9.5&quot;,noexcuses-1.1.0.jar;g=&quot;com.tacitknowledge&quot;;a=&quot;noexcuses&quot;;v=&quot;1.1.0&quot;" />
+          <property key="Bundle-ClassPath" value=".,json-20090211.jar,twitter4j-core-3.0.4.jar,gson-2.2.4.jar" />
+          <property key="Embedded-Artifacts" value="json-20090211.jar;g=&quot;org.json&quot;;a=&quot;json&quot;;v=&quot;20090211&quot;,twitter4j-core-3.0.4.jar;g=&quot;org.twitter4j&quot;;a=&quot;twitter4j-core&quot;;v=&quot;3.0.4&quot;,gson-2.2.4.jar;g=&quot;com.google.code.gson&quot;;a=&quot;gson&quot;;v=&quot;2.2.4&quot;" />
         </additionalProperties>
         <additionalJARContents />
       </configuration>
@@ -28,8 +28,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.slf4j:slf4j-api:1.7.5" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.slf4j:jcl-over-slf4j:1.5.8" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.slf4j:slf4j-simple:1.5.2" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.jcr:jcr:2.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.sling:org.apache.sling.scripting.jsp:2.0.26" level="project" />
@@ -55,7 +53,7 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.commons:commons-exec:1.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.httpcomponents:httpmime:4.2.3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.sling:org.apache.sling.commons.json:2.0.6" level="project" />
-    <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.4" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: commons-lang:commons-lang:2.4" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.sling:org.apache.sling.commons.testing:2.0.8" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.sling:org.apache.sling.jcr.api:2.1.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.jackrabbit:jackrabbit-api:2.5-r1431252" level="project" />
@@ -96,6 +94,7 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.slf4j:slf4j-simple:1.5.2" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jmock:jmock-junit4:2.5.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jmock:jmock:2.5.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.hamcrest:hamcrest-core:1.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.hamcrest:hamcrest-library:1.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: junit:junit-dep:4.4" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.adobe.granite:com.adobe.granite.xssprotection:5.5.22" level="project" />
@@ -147,8 +146,6 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.sling:org.apache.sling.jcr.resource:2.2.2" level="project" />
     <orderEntry type="library" name="Maven: org.twitter4j:twitter4j-core:3.0.4" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.2.4" level="project" />
-    <orderEntry type="library" name="Maven: org.mockito:mockito-all:1.9.5" level="project" />
-    <orderEntry type="library" name="Maven: com.tacitknowledge:noexcuses:1.1.0" level="project" />
   </component>
 </module>
 

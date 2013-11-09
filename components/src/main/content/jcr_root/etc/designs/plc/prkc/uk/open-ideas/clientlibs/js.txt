@@ -11,6 +11,5 @@ fixForms.js
 dectectDeviceOrientation.js
 
 
-date.js
 twitter-feed-page.js
 marquee-scrolling.js

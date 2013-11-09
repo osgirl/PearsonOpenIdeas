@@ -51,6 +51,7 @@
 
                                     html += "<p class='twitter-paragraph'>" + text +"</p>";
 
+
                                 html += "</div>";
 
 

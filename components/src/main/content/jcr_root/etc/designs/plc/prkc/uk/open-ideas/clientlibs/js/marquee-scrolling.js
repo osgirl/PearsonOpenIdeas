@@ -36,6 +36,11 @@
 
     function scrollmarquee() {
 
+        //scroll only if there are tweets to display
+        if (jQuery('#all-articles-marquee').length === 0){
+            return;
+        }
+
         var topOffset = parseInt(jQuery('#all-articles-marquee').position().top);
 
         if (topOffset >(actualheight*(-1)+8) )  { //if scroller hasn't reached the end of its height

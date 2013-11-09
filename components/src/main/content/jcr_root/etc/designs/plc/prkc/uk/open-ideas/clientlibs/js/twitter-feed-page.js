@@ -49,7 +49,6 @@
                         html += "<div class='twitter-image'><img class='twitter-logo-src' src='/etc/designs/plc/prkc/uk/open-ideas/clientlibs/img/twitter_logo_icon.jpeg'></div>";
                         html += "</div>";
                         html += "<p class='twitter-paragraph'>" + text +"</p>";
-
                         html += "</div>";
                     }
 

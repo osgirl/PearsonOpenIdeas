@@ -1,3 +1,7 @@
+.loading-twitter-pannel{
+    color: red;
+}
+
 .twitterFeedArea{
     margin-bottom: 30px;
     width: 200px;
@@ -17,7 +21,7 @@
 
 .twitter-article{
     height: 100px;
-    width: 67%;
+    width: 65%;
 }
 
 .twitter-image{
@@ -60,4 +64,6 @@
 
 #all-articles-marquee{
     position: relative;
+    -webkit-transition: top 1s, bottom;
+    transition: top 1s, bottom;
 }

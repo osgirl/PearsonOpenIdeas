@@ -23,7 +23,7 @@ if (accounts!= null) {
     }
 %>
 <div class="panel" id="twitter-feed-container" data-scroll="true" data-twitter-accounts='<%=twitterAccounts%>' data-tweet-count='10'>
-    <p class="loading">Loading twitter feeds for accounts. Refresh page to see results</p>
+    <p class="loading-twitter-pannel">Loading twitter feeds for accounts. Refresh page to see results</p>
 </div>
 <%        
 }

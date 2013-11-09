@@ -19,7 +19,7 @@
                 async: false,
                 success: function(data) {
                     // loop around the result
-                    $(".loading", tweets).remove();
+                    $(".loading-twitter-pannel", tweets).remove();
                     var rescount = data['results'].length;
                     var html =
                             "<div id='all-articles-marquee'>";
@@ -88,11 +88,11 @@
         var diff = ((new Date()).getTime() - date.getTime()) / 1000;
         var day_diff = Math.floor(diff / 86400);
 
-        if (day_diff < 0 || day_diff >= 31 || isNaN(day_diff)) {
-            return "View tweet";
-        }
 
 
+//        if (day_diff < 0 || day_diff >= 31 || isNaN(day_diff)) {
+//            return "View tweet";
+//        }
         /*
          if (day_diff === 0 && diff<2073600){
          return date.toString("hh:mm tt");
@@ -102,11 +102,16 @@
          return date.toDateString();
          }*/
 
-
-        if (new Date().toDateString() === date.toDateString()){
+        if (isNaN(day_diff))
+        {
+            return "View tweet";
+        }
+        else if (new Date().toDateString() === date.toDateString())
+        {
             return date.toString("hh:mm tt");
         }
-        else {
+        else
+        {
             return date.toDateString();
         }
 

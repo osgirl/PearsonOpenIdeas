@@ -1,9 +1,10 @@
 (function($) {
 
     /***********************************************
-     * Cross browser Marquee II- © Dynamic Drive (www.dynamicdrive.com)
-     * This notice MUST stay intact for legal use
-     * Visit http://www.dynamicdrive.com/ for this script and 100s more.
+     *
+     *
+     *
+     *
      ***********************************************/
 
     var delayb4scroll = 3000 //Specify initial delay before marquee starts to scroll on page (2000=2 seconds)
@@ -13,17 +14,20 @@
 ////NO NEED TO EDIT BELOW THIS LINE////////////
 
     var copyspeed = marqueespeed;
-    var pausespeed = (pauseit==0)? copyspeed: 0
-    var marqueeheight = 55;
-    var maxTweets = 5;
-    var twitterArticleHeight = 100;
-    var actualheight = (maxTweets-1)*twitterArticleHeight;
+    var maxTweets;
+    var twitterArticleHeight;
+    var actualheight;
 
     function initializemarquee() {
+
+        maxTweets = $('#twitter-feed-container').data('numberOfTweets');
+        twitterArticleHeight = jQuery('.twitter-article').height();
+        actualheight = (maxTweets-1) * twitterArticleHeight;
+
         jQuery('#all-articles-marquee').css('top', 0);
 
         if (window.opera || navigator.userAgent.indexOf("Netscape/7")!=-1){ //if Opera or Netscape 7x, add scrollbars to scroll and exit
-            jQuery('#all-articles-marquee').css("top").css('height', marqueeheight + 'px');
+            jQuery('#all-articles-marquee').css("top").css('height', twitterArticleHeight + 'px');
             jQuery('#all-articles-marquee').css("top").css('overflow', 'scroll');
             return ;
         }

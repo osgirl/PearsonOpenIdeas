@@ -31,6 +31,3 @@ else{
     out.write("<div>[Add Twitter accounts here]</div>");
 }
 %>
-
-
-

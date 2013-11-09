@@ -76,7 +76,6 @@
          if (day_diff === 0 && diff<2073600){
          return date.toString("hh:mm tt");
          }
-
          else {
          return date.toDateString();
          }*/

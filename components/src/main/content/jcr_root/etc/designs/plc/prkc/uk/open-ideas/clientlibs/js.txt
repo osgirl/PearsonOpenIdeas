@@ -10,6 +10,7 @@ filterby.js
 fixForms.js
 dectectDeviceOrientation.js
 
-twitter-feed-page.js
+
 date.js
+twitter-feed-page.js
 marquee-scrolling.js

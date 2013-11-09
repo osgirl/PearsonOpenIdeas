@@ -17,7 +17,7 @@ public class Constants {
 
     public static final String DEFAULT_LOGIN_ERROR_MESSAGE = "Login failed";
 
-    public static final boolean LOGIN_USE_SECURE_COOKIE = true;
+    public static final boolean LOGIN_USE_SECURE_COOKIE = false;
 
     /**
      * Empty private constructor since this is a utility.

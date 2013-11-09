@@ -57,14 +57,17 @@ public class TwitterGetTweetsServlet extends SlingAllMethodsServlet
         Map<String, List> twitterResultList = new HashMap<String, List>();
         Collections.sort(listConcatenatedStatuses, Collections.reverseOrder(new TwitterDateComparator()));
 
-        // remove elements only if size is smaller than max tweets
-        if (listConcatenatedStatuses.size() > maxTweetsPerComponent)
+        int maxExistingTweets = 0;
+        if (listConcatenatedStatuses.size() <  maxTweetsPerComponent)
         {
-            Collection<Tweet> toBeRemoved = listConcatenatedStatuses.subList(maxTweetsPerComponent, listConcatenatedStatuses.size() );
-            listConcatenatedStatuses.removeAll(toBeRemoved);
+            maxExistingTweets = listConcatenatedStatuses.size();
+        }
+        else
+        {
+            maxExistingTweets = maxTweetsPerComponent;
         }
 
-        twitterResultList.put("results", listConcatenatedStatuses);
+        twitterResultList.put("results", listConcatenatedStatuses.subList(0, maxExistingTweets));
 
         String stringGson = new Gson().toJson(twitterResultList);
 

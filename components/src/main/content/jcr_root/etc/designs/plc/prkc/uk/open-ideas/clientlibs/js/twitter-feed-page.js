@@ -21,8 +21,6 @@
                     // loop around the result
                     $(".loading", tweets).remove();
                     var rescount = data['results'].length;
-
-                    tweets.clear();
                     var html =
                             "<div id='all-articles-marquee'>";
 
@@ -39,7 +37,7 @@
                                 .replace(/(^|\s)#(\w+)/g,'$1<a href="http://search.twitter.com/search?q=%23$2">#$2</a>')
                                 .replace(/(^|\s)@(\w+)/g,'$1<a href="http://twitter.com/$2">@$2</a>');
 
-                        text = text + '<br /><a href="http://www.twitter.com/' + user_screenName + '/status/' + id_str + '" class="datelink" target="_blank">' + created_at + '</a></div>';
+                        text = text + '<br /><a href="http://www.twitter.com/' + user_screenName + '/status/' + id_str + '" class="datelink" target="_blank">' + created_at + '</a>';
 
 
 

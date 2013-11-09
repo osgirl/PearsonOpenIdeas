@@ -49,7 +49,6 @@
                         html += "<div class='twitter-image'><img class='twitter-logo-src' src='/etc/designs/plc/prkc/uk/open-ideas/clientlibs/img/twitter_logo_icon.jpeg'></div>";
                         html += "</div>";
                         html += "<p class='twitter-paragraph'>" + text +"</p>";
-
                         html += "</div>";
                     }
 
@@ -70,8 +69,6 @@
         var diff = ((new Date()).getTime() - date.getTime()) / 1000;
         var day_diff = Math.floor(diff / 86400);
 
-
-
 //        if (day_diff < 0 || day_diff >= 31 || isNaN(day_diff)) {
 //            return "View tweet";
 //        }
@@ -79,7 +76,6 @@
          if (day_diff === 0 && diff<2073600){
          return date.toString("hh:mm tt");
          }
-
          else {
          return date.toDateString();
          }*/

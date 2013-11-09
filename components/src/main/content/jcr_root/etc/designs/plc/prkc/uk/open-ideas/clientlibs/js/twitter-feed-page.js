@@ -69,8 +69,6 @@
         var diff = ((new Date()).getTime() - date.getTime()) / 1000;
         var day_diff = Math.floor(diff / 86400);
 
-
-
 //        if (day_diff < 0 || day_diff >= 31 || isNaN(day_diff)) {
 //            return "View tweet";
 //        }

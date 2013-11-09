@@ -40,8 +40,6 @@
 
                         text = text + '<br /><a href="http://www.twitter.com/' + user_screenName + '/status/' + id_str + '" class="datelink" target="_blank">' + created_at + '</a>';
 
-
-
                         html += "<div class='twitter-article'>";
                         html += "<div class='header-article'>";
                         html += "<img src=\"" + profile_image_url + "\" alt=\"" + user_screenName + " avatar\" />"

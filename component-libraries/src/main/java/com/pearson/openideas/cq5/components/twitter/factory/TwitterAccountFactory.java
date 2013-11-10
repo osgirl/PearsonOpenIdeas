@@ -8,6 +8,7 @@ import twitter4j.conf.ConfigurationBuilder;
  * @author John S. (jspyronis@tacitknowledge.com)
  *         Date: 31/10/2013
  *         Time: 13:02
+ *         sets up a new twitter OAUTH configuration for the new API (v1.1)
  */
 
 public class TwitterAccountFactory

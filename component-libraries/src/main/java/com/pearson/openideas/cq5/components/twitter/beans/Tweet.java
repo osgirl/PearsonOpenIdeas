@@ -3,6 +3,7 @@ package com.pearson.openideas.cq5.components.twitter.beans;
 import java.util.Date;
 
 /**
+ * This class represents the Tweet pojo objects.
  * @author John S. (jspyronis@tacitknowledge.com)
  *         Date: 01/11/2013
  *         Time: 14:49

@@ -5,6 +5,7 @@ import com.pearson.openideas.cq5.components.twitter.beans.Tweet;
 import java.util.Comparator;
 
 /**
+ * This class is representing comparators for the dates of tweets.
  * @author John S. (jspyronis@tacitknowledge.com)
  *         Date: 29/10/2013
  *         Time: 14:30

@@ -2,7 +2,7 @@
 
   Twitter Panel component.
 
-  This is Pearson twitter panel component
+  This is Pearson twitter panel component.
 
 --%><%
 %><%@include file="/apps/plc/prkc/uk/open-ideas/global.jsp"%>

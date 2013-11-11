@@ -5,6 +5,7 @@ import twitter4j.TwitterFactory;
 import twitter4j.conf.ConfigurationBuilder;
 
 /**
+ * * This class is representing a factory for a twitter instance based on authenticating details.
  * @author John S. (jspyronis@tacitknowledge.com)
  *         Date: 31/10/2013
  *         Time: 13:02
@@ -29,10 +30,7 @@ public class TwitterAccountFactory
         configBuilder.setOAuthAccessToken(ACCESS_TOKEN);
         configBuilder.setOAuthAccessTokenSecret(ACCESS_TOKEN_SECRET);
 
-        //use the ConfigBuilder.build() method and pass the result to the TwitterFactory
         TwitterFactory tf = new TwitterFactory(configBuilder.build());
-
-        //you can now get authenticated instance of Twitter object.
         twitter = tf.getInstance();
     }
 

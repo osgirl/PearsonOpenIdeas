@@ -1,5 +1,17 @@
 (function($) {
 
+    /***********************************************
+     *
+     *  Script used for consuming json from sling servlet (returning all tweets based on twitter accounts) .
+     *
+     *  tweets = the div area where the tweets will be appended.
+     *  twitterAccounts = all twitter accounts that have be assigned to the panel, using cq5 widget dialog
+     *  maxTweetcount = the maximim number of latest tweets to be displayed in the panel.
+     *
+     *
+     ***********************************************/
+
+
     $(function() {
 
         var tweets = $("#twitter-feed-container");
@@ -56,6 +68,16 @@
         }
     });
 })($CQ || $);
+
+/***********************************************
+ *
+ *  Returns time in hh:mm:ss if tweet was today, otherwise returns date and time if tweet was before today.
+ *
+ *  time = the date tweet was posted
+ *
+ *
+ *
+ ***********************************************/
 
 (function($) {
     $.timeSinceTweet = function(time) {

@@ -1,6 +1,7 @@
 package com.pearson.openideas.cq5.components.twitter.beans;
 
 /**
+ * This class represents the tweet User pojo objects.
  * @author John S. (jspyronis@tacitknowledge.com)
  *         Date: 01/11/2013
  *         Time: 14:25

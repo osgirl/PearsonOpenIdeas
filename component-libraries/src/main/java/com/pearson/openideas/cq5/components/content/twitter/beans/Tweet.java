@@ -1,4 +1,4 @@
-package com.pearson.openideas.cq5.components.twitter.beans;
+package com.pearson.openideas.cq5.components.content.twitter.beans;
 
 import java.util.Date;
 
@@ -54,8 +54,4 @@ public class Tweet
     {
         this.id = id;
     }
-
-
-
-
 }

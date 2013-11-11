@@ -1,4 +1,4 @@
-package com.pearson.openideas.cq5.components.twitter.beans;
+package com.pearson.openideas.cq5.components.content.twitter.beans;
 
 /**
  * This class represents the tweet User pojo objects.

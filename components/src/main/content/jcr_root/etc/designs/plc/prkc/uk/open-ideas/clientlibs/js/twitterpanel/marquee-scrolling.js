@@ -2,7 +2,7 @@
 
     /***********************************************
      *
-     *  Script used for vertical scrolling for tweets inside the twitter panel .
+     *  Script used for vertical scrolling for tweets inside the twitter panel (based on : http://www.javascriptkit.com/howto/cscroll.shtml).
      *
      *  maxTweets = the number of maximum tweets retrieved through data attribute from the twitterpanel component(default = 5).
      *  delayb4scroll = a small delay the first time when refreshing the page before starting to scroll the tweets.

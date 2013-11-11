@@ -1,6 +1,6 @@
-package com.pearson.openideas.cq5.components.twitter.compare;
+package com.pearson.openideas.cq5.components.content.twitter.compare;
 
-import com.pearson.openideas.cq5.components.twitter.beans.Tweet;
+import com.pearson.openideas.cq5.components.content.twitter.beans.Tweet;
 
 import java.util.Comparator;
 

@@ -1,10 +1,10 @@
-package com.pearson.openideas.cq5.components.twitter.servlet;
+package com.pearson.openideas.cq5.components.content.twitter.servlet;
 
 import com.google.gson.Gson;
-import com.pearson.openideas.cq5.components.twitter.beans.Tweet;
-import com.pearson.openideas.cq5.components.twitter.compare.TwitterDateComparator;
-import com.pearson.openideas.cq5.components.twitter.factory.TweetObjectFactory;
-import com.pearson.openideas.cq5.components.twitter.factory.TwitterAccountFactory;
+import com.pearson.openideas.cq5.components.content.twitter.beans.Tweet;
+import com.pearson.openideas.cq5.components.content.twitter.compare.TwitterDateComparator;
+import com.pearson.openideas.cq5.components.content.twitter.factory.TweetObjectFactory;
+import com.pearson.openideas.cq5.components.content.twitter.factory.TwitterAccountFactory;
 import org.apache.felix.scr.annotations.sling.SlingServlet;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
@@ -34,7 +34,7 @@ import java.util.Map;
 @SlingServlet(paths="/bin/twitterServlet", methods = "GET", metatype=true)
 public class TwitterGetTweetsServlet extends SlingAllMethodsServlet
 {
-    private static final Logger LOGGER = LoggerFactory.getLogger(com.pearson.openideas.cq5.components.twitter.servlet.TwitterGetTweetsServlet.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(TwitterGetTweetsServlet.class);
 
 
     /**

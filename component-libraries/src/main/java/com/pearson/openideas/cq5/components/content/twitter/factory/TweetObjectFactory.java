@@ -1,13 +1,13 @@
-package com.pearson.openideas.cq5.components.twitter.factory;
+package com.pearson.openideas.cq5.components.content.twitter.factory;
 
-import com.pearson.openideas.cq5.components.twitter.beans.Tweet;
-import com.pearson.openideas.cq5.components.twitter.beans.User;
+import com.pearson.openideas.cq5.components.content.twitter.beans.Tweet;
+import com.pearson.openideas.cq5.components.content.twitter.beans.User;
 import twitter4j.Status;
 
 /**
- * * This class is representing a factory that creates tweets based on tweet statuses.
+ * This class is representing a factory that creates tweets based on tweet statuses.
  * @author John Spyronis (jspyronis@tacitknowledge.com)
- * returns tweet bean object based on twitter status
+ *
  */
 public class TweetObjectFactory
 {

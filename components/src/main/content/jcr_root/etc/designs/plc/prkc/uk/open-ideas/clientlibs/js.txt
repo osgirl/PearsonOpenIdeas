@@ -10,6 +10,5 @@ filterby.js
 fixForms.js
 dectectDeviceOrientation.js
 
-
-twitter-feed-page.js
-marquee-scrolling.js
+twitterpanel/twitter-feed-page.js
+twitterpanel/marquee-scrolling.js

@@ -137,18 +137,6 @@
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
         </dependency>
-
-        <!--Mockito for unit testing-->
-        <!--<dependency>-->
-            <!--<groupId>org.mockito</groupId>-->
-            <!--<artifactId>mockito-all</artifactId>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-            <!--<groupId>com.tacitknowledge</groupId>-->
-            <!--<artifactId>noexcuses</artifactId>-->
-        <!--</dependency>-->
-
     </dependencies>
 
     <build>

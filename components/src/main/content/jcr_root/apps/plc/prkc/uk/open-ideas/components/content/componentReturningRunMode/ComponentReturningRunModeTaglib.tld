@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taglib version="2.0"
+        xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+              http://java.sun.com/xml/ns/j2ee
+              http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd">
+
+    <tlib-version>1.0</tlib-version>
+    <short-name>tagrunMode</short-name>
+    <uri>ComponentReturningRunModeTaglib.tld</uri>
+    <tag>
+        <name>ComponentReturningRunModeTag</name>
+        <tag-class>com.pearson.openideas.cq5.components.tags.ComponentReturningRunModeTag</tag-class>
+        <body-content>empty</body-content>
+    </tag>
+</taglib>

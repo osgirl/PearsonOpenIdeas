@@ -9,15 +9,11 @@ import com.crownpartners.cq.quickstart.core.component.AbstractComponent;
 import org.apache.sling.api.scripting.SlingBindings;
 import org.apache.sling.api.scripting.SlingScriptHelper;
 import org.apache.sling.settings.SlingSettingsService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import javax.servlet.jsp.PageContext;
 import java.util.Set;
 
 public class ComponentReturningRunMode extends AbstractComponent{
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(ComponentReturningRunMode.class);
 
     private String runMode;
     public String getRunMode()

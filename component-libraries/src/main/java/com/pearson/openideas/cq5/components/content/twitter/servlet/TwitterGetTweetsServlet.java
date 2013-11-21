@@ -46,7 +46,7 @@ public class TwitterGetTweetsServlet extends SlingAllMethodsServlet
      */
 
     @Override
-    protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response) throws IOException
+    public void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response) throws IOException
     {
         String[] usernames = request.getParameterValues("arrayTwitterAccounts");
         String maxTweetcount = request.getParameter("maxTweetcount");

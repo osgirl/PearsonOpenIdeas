@@ -123,6 +123,8 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.adobe.cq.social:cq-social-commons:1.1.23" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.sling:org.apache.sling.jcr.base:2.1.2" level="project" />
     <orderEntry type="library" name="Maven: com.day.cq:cq-rewriter:5.6.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.mockito:mockito-all:1.9.5" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.tacitknowledge:noexcuses:1.1.0" level="project" />
   </component>
 </module>
 

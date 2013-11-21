@@ -23,6 +23,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
@@ -145,6 +146,8 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.sling:org.apache.sling.jcr.resource:2.2.2" level="project" />
     <orderEntry type="library" name="Maven: org.twitter4j:twitter4j-core:3.0.4" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.2.4" level="project" />
+    <orderEntry type="library" name="org.apache.servicemix.bundles.solr-solrj-4.2.1_1" level="project" />
+    <orderEntry type="library" name="localrepo" level="project" />
   </component>
 </module>
 

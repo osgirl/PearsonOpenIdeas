@@ -8,7 +8,7 @@
 
     <tlib-version>1.0</tlib-version>
     <short-name>tagrunMode</short-name>
-    <uri>ComponentReturningRunModeTaglib.tld</uri>
+    <uri>http://openideas-pearson/tacit/tags</uri>
     <tag>
         <name>ComponentReturningRunModeTag</name>
         <tag-class>com.pearson.openideas.cq5.components.tags.ComponentReturningRunModeTag</tag-class>

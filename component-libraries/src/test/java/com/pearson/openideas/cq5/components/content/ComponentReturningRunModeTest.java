@@ -1,18 +1,23 @@
 package com.pearson.openideas.cq5.components.content;
 
 import org.apache.sling.api.SlingHttpServletRequest;
+import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.scripting.SlingBindings;
 import org.apache.sling.api.scripting.SlingScriptHelper;
 import org.apache.sling.settings.SlingSettingsService;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+import javax.servlet.jsp.PageContext;
 import javax.servlet.jsp.tagext.TagSupport;
 import java.util.HashSet;
 import java.util.Set;
 
+import static junit.framework.Assert.assertEquals;
+import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 /**
@@ -38,10 +43,16 @@ public class ComponentReturningRunModeTest
     private SlingSettingsService slingSettingsService;
 
     @Mock
-    private TagSupport tagSupport;
+    private PageContext pageContext;
 
     @Mock
+    private TagSupport tagSupport;
+
+
     private ComponentReturningRunMode componentReturningRunMode;
+
+    @Mock
+    private Resource resource;
 
 
     @Before
@@ -55,24 +66,36 @@ public class ComponentReturningRunModeTest
         when(slingBindings.getSling()).thenReturn(scriptHelper);
         when(scriptHelper.getService(SlingSettingsService.class)).thenReturn(slingSettingsService);
 
+        PageContext pageContext = mock(PageContext.class);
+        when(pageContext.getRequest()).thenReturn(slingHttpServletRequest);
+
+        //this(pageContext, (Resource) pageContext.getAttribute("resource"));
+        when(pageContext.getAttribute("resource")).thenReturn(resource);
+        //when(resource.)
+
+        componentReturningRunMode = new ComponentReturningRunMode(pageContext);
+        //when(slingSettingsService.)
+
     }
 
-    @Test()
+    @Test
+    @Ignore
     public void testGetRunModeAuthor() throws Exception
     {
         when(slingSettingsService.getRunModes()).thenReturn(runModesWithAuthor);
 
         String runMode = componentReturningRunMode.getRunMode();
-        //assertEquals("Author running mode is the one we are waiting", authorMode, runMode);
+        assertEquals("Author running mode is the one we are waiting", authorMode, runMode);
     }
 
     @Test
+    @Ignore
     public void testGetRunModePublish() throws Exception
     {
         when(slingSettingsService.getRunModes()).thenReturn(runModesWithPublish);
 
         String runMode = componentReturningRunMode.getRunMode();
-        //assertEquals("Author running mode is the one we are waiting", publishMode, runMode);
+        assertEquals("Author running mode is the one we are waiting", publishMode, runMode);
     }
 
     private void addModesToSets()

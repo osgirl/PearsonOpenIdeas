@@ -6,6 +6,8 @@ package com.pearson.openideas.cq5.components.content;
  */
 
 import com.crownpartners.cq.quickstart.core.component.AbstractComponent;
+import com.pearson.openideas.cq5.components.services.test.TestService;
+import org.apache.felix.scr.annotations.Reference;
 import org.apache.sling.api.scripting.SlingBindings;
 import org.apache.sling.api.scripting.SlingScriptHelper;
 import org.apache.sling.settings.SlingSettingsService;
@@ -14,6 +16,10 @@ import javax.servlet.jsp.PageContext;
 import java.util.Set;
 
 public class ComponentReturningRunMode extends AbstractComponent{
+
+
+    @Reference
+    private TestService testService;
 
     private String runMode;
     public String getRunMode()
@@ -52,5 +58,8 @@ public class ComponentReturningRunMode extends AbstractComponent{
                 break;
             }
         }
+
+        testService = getSlingScriptHelper().getService(TestService.class);
+        testService.runTestService();
     }
 }

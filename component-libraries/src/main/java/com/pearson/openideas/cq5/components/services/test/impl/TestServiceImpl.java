@@ -3,7 +3,6 @@ package com.pearson.openideas.cq5.components.services.test.impl;
 import com.pearson.openideas.cq5.components.services.test.TestService;
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Service;
-import org.osgi.service.component.ComponentContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,10 +31,5 @@ public class TestServiceImpl implements TestService
     public void runTestService()
     {
         LOGGER.debug("Running Test Service is ok........");
-    }
-
-    protected void activate(ComponentContext context) throws Exception
-    {
-        LOGGER.info("Service Test activating");
     }
 }

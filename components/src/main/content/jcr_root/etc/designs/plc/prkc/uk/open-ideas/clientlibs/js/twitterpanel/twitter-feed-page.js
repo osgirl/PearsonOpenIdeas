@@ -19,7 +19,6 @@
         var maxTweetcount = tweets.attr("data-tweet-count");
 
         if(typeof(twitterAccounts) != 'undefined' && twitterAccounts.length > 0 ) {
-
             var arrayTwitterAccounts = twitterAccounts.split(",");
 
             $.ajax({
@@ -29,30 +28,27 @@
                 async: false,
                 success: function(data) {
 
-                    // loop around the result
                     $(".loading-twitter-pannel", tweets).remove();
                     var rescount = data['results'].length;
 
                     var html = "<div id='all-articles-marquee'>";
-
                     if (rescount === 0) {
                         var text = "No tweets found for the current accounts";
                         html += "<div class='twitter-no-results-found'>";
                         html += text;
                         html += "</div>";
                     }
-
                     for (var res = 0 ; res < rescount; res++) {
-                        var text = data['results'][res]['text'];
-                        var from_user = data['results'][res]['user']['name'];
-                        var user_screenName = data['results'][res]['user']['screenName'];
-                        var created_at = $.timeSinceTweet(data['results'][res]['createdAt']);
-                        var id_str = data['results'][res]['id'];
-                        var profile_image_url = data['results'][res]['user']['profileImageUrl'];
+                        var result = data['results'][res];
+                        var text = result['text'];
+                        var from_user = result['user']['name'];
+                        var user_screenName = result['user']['screenName'];
+                        var created_at = $.timeSinceTweet(result['createdAt']);
+                        var id_str = result['id'];
+                        var profile_image_url = result['user']['profileImageUrl'];
 
                         //Tidy up the text by adding hyperlinks and the date posted
                         text = text.replace(/((ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?)/gi,'<a href="$1">$1</a>')
-                            //.replace(/(^|\s)#(\w+)/g,'$1<a href="http://search.twitter.com/search?q=%23$2">#$2</a>')
                             .replace(/(^|\s)@(\w+)/g,'$1<a href="http://twitter.com/$2">@$2</a>');
 
                         text = text + '<br /><a href="http://www.twitter.com/' + user_screenName + '/status/' + id_str + '" class="datelink" target="_blank">' + created_at + '</a>';
@@ -92,40 +88,35 @@
         var diff = ((new Date()).getTime() - date.getTime()) / 1000;
         var day_diff = Math.floor(diff / 86400);
 
-        if (isNaN(day_diff))
-        {
+        if (isNaN(day_diff)){
             return "View tweet";
         }
 
-        else if (new Date().toDateString() === date.toDateString())
-        {
+        else if (new Date().toDateString() === date.toDateString()) {
             var hours = date.getHours();
             var minutes =  date.getMinutes();
             var seconds = date.getSeconds();
             var mid = "AM";
 
-            if (minutes < 10){
+            if (minutes < 10) {
                 minutes = "0" + minutes;
             }
-            if (seconds < 10){
+            if (seconds < 10) {
                 seconds = "0" + seconds;
             }
-            if (hours < 10){
+            if (hours < 10) {
                 hours = "0" + hours;
             }
-            else if (hours == 0){
+            else if (hours == 0) {
                 hours = "12";
             }
-            else if (hours > 12){
+            else if (hours > 12) {
                 hours = hours % 12;
                 mid = "PM";
             }
-
             return hours + ":" + minutes + ":" + seconds + " " + mid;
         }
-
-        else
-        {
+        else {
             return date.toDateString();
         }
     }

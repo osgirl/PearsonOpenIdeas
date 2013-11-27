@@ -20,6 +20,14 @@
                         width="155"
                         xtype="textfield"/>
                 </accounts>
+                <maxNumberTweets
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Max number of tweets"
+                        name="./maxNumberTweets"
+                        regex="/^[0-9]*$/"
+                        regexText="Please enter a valid number of tweets."
+                        xtype="textfield">
+                </maxNumberTweets>
             </items>
             <listeners jcr:primaryType="nt:unstructured"/>
         </list>

@@ -24,7 +24,7 @@
 
     function initializemarquee() {
 
-        maxTweets = $('#twitter-feed-container').data('numberOfTweets');
+        maxTweets = $('#twitter-feed-container').data('tweetCount');
         twitterArticleHeight = jQuery('.twitter-article').height();
         actualheight = (maxTweets-1) * twitterArticleHeight;
 

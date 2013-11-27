@@ -9,6 +9,14 @@
 <%@page session="false" %><%
 %>
 <%
+
+String maxNumberTweets = properties.get("maxNumberTweets", String.class);
+if (maxNumberTweets == null){
+    // If maxNumberTweets not set, then set to default to be 5.
+    maxNumberTweets = "5";
+}
+
+
 // Get Twitter feeds
 String[] accounts= properties.get("accounts", String[].class);
 
@@ -22,7 +30,7 @@ if (accounts!= null) {
         }
     }
 %>
-<div class="panel" id="twitter-feed-container" data-scroll="true" data-twitter-accounts='<%=twitterAccounts%>' data-tweet-count='10'>
+<div class="panel" id="twitter-feed-container" data-scroll="true" data-twitter-accounts='<%=twitterAccounts%>' data-tweet-count='<%=maxNumberTweets%>'>
     <p class="loading-twitter-pannel">Loading twitter feeds for accounts. Refresh page to see results</p>
 </div>
 <%        

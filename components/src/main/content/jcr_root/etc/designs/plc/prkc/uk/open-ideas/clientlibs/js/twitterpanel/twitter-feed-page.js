@@ -16,7 +16,7 @@
 
         var tweets = $("#twitter-feed-container");
         var twitterAccounts = tweets.attr("data-twitter-accounts");
-        var maxTweetcount = 5;
+        var maxTweetcount = tweets.attr("data-tweet-count");
 
         if(typeof(twitterAccounts) != 'undefined' && twitterAccounts.length > 0 ) {
 
@@ -30,7 +30,6 @@
                 success: function(data) {
 
                     // loop around the result
-                    tweets.attr('data-number-of-tweets', data['results'].length);
                     $(".loading-twitter-pannel", tweets).remove();
                     var rescount = data['results'].length;
 

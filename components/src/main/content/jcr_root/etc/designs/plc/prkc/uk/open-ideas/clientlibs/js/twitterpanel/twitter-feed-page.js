@@ -36,7 +36,14 @@
 
                     var html = "<div id='all-articles-marquee'>";
 
-                    for (var res=0 ; res < rescount; res++) {
+                    if (rescount === 0) {
+                        var text = "No tweets found for the current accounts";
+                        html += "<div class='twitter-no-results-found'>";
+                        html += text;
+                        html += "</div>";
+                    }
+
+                    for (var res = 0 ; res < rescount; res++) {
                         var text = data['results'][res]['text'];
                         var from_user = data['results'][res]['user']['name'];
                         var user_screenName = data['results'][res]['user']['screenName'];

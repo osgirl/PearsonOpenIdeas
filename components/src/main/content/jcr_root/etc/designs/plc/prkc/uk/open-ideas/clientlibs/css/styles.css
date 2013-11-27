@@ -73,3 +73,8 @@
     -webkit-transition: top 1s, bottom;
     transition: top 1s, bottom;
 }
+
+.twitter-no-results-found {
+    color: red;
+}
+

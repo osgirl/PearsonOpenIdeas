@@ -36,7 +36,6 @@ public class TwitterGetTweetsServlet extends SlingAllMethodsServlet
 {
     private static final Logger LOGGER = LoggerFactory.getLogger(TwitterGetTweetsServlet.class);
 
-
     /**
      * This method writes a json response. The request includes all twitter accounts usernames and max number of tweets.
 
@@ -74,9 +73,7 @@ public class TwitterGetTweetsServlet extends SlingAllMethodsServlet
         }
 
         twitterResultList.put("results", listConcatenatedStatuses.subList(0, maxExistingTweets));
-
         String stringGson = new Gson().toJson(twitterResultList);
-
         response.setCharacterEncoding("UTF-8");
         response.getWriter().write(stringGson);
     }

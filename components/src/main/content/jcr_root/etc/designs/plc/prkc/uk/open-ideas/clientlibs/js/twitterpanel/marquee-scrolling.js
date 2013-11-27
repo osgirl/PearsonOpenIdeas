@@ -60,8 +60,10 @@
         }
     }
 
-    document.addEventListener( "DOMContentLoaded", initializemarquee, true );
-
+    //document.addEventListener( "DOMContentLoaded", initializemarquee, false );
+    $( document ).ready(function() {
+        initializemarquee();
+    });
 })($CQ || $);
 
 

@@ -46,6 +46,22 @@
                             fieldLabel="Link"
                             name="./button1Link"
                             xtype="textfield"/>
+
+                    <bgcolor1
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Background color"
+                            name="./bgColor1"
+                            showHexValue="true"
+                            xtype="colorfield"/>
+
+                    <txtcolor1
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Text color"
+                            name="./txtColor1"
+                            showHexValue="true"
+                            xtype="colorfield"/>
+
+
                 </items>
             </button1>
             <button2
@@ -66,6 +82,21 @@
                             fieldLabel="Link"
                             name="./button2Link"
                             xtype="textfield"/>
+                    <bgcolor2
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Background color"
+                            name="./bgColor2"
+                            showHexValue="true"
+                            xtype="colorfield"/>
+
+                    <txtcolor2
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Text color"
+                            name="./txtColor2"
+                            showHexValue="true"
+                            xtype="colorfield"/>
+
+
                 </items>
             </button2>
         </items>

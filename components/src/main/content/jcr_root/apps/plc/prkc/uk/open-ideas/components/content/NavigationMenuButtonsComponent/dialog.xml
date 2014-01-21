@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="cq:Dialog"
+          title="Navigation Menu Buttons"
+          xtype="dialog">
+    <items
+            jcr:primaryType="cq:Widget"
+            xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <button1
+                    jcr:primaryType="cq:Panel"
+                    title="Button 1">
+
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <buttonSelect
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Button Select"
+                            name="./buttonSelect"
+                            type="radiogroup"
+                            xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <onebutton
+                                    jcr:primaryType="cq:Widget"
+                                    text="One button only"
+                                    value="oneButton"/>
+                            <twobuttons
+                                    jcr:primaryType="cq:Widget"
+                                    text="Two buttons"
+                                    value="twoButtons"/>
+                        </options>
+                        <listeners
+                                jcr:primaryType="nt:unstructured"
+                                selectionchanged="function(field){var tabpanel = field.findParentByType('tabpanel');if (field.getValue() == 'twoButtons') {tabpanel.unhideTabStripItem(1);tabpanel.hideTabStripItem(2)} else {tabpanel.hideTabStripItem(1);tabpanel.unhideTabStripItem(2)}}"/>
+                    </buttonSelect>
+                    <button1Text
+                            jcr:primaryType="cq:Widget"
+                            allowBlank="{Boolean}false"
+                            fieldDescription="Text for button"
+                            fieldLabel="Text"
+                            name="./button1Text"
+                            xtype="textfield"/>
+                    <button1Link
+                            jcr:primaryType="cq:Widget"
+                            allowBlank="{Boolean}false"
+                            fieldDescription="Link (should start with http:// or https://"
+                            fieldLabel="Link"
+                            name="./button1Link"
+                            xtype="textfield"/>
+                </items>
+            </button1>
+            <button2
+                    jcr:primaryType="cq:Panel"
+                    title="Button 2">
+
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <button2Text
+                            jcr:primaryType="cq:Widget"
+                            allowBlank="{Boolean}false"
+                            fieldDescription="Text for button"
+                            fieldLabel="Text"
+                            name="./button2Text"
+                            xtype="textfield"/>
+                    <button2Link
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Link (should start with http:// or https://"
+                            fieldLabel="Link"
+                            name="./button2Link"
+                            xtype="textfield"/>
+                </items>
+            </button2>
+        </items>
+    </items>
+</jcr:root>
